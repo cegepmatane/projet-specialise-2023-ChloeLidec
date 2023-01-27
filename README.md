@@ -10,3 +10,4 @@ Lidec Chloé
     - Fiche Kick-off remplie
     - Création du Readme
     - Rensiegnements pour la veille technologique
+    - Illustrations pour le projet
