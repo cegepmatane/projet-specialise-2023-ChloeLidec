@@ -4,7 +4,6 @@ Lidec Chloé
 
 
 ## Semaine 1
-
 ### Initialisation du projet :
 
     - Brainstorm pour trouver le sujet de projet
