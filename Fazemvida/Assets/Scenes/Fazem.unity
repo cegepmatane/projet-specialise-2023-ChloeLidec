@@ -851,7 +851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 32486419}
   m_Layer: 0
-  m_Name: Routes
+  m_Name: Roads
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 33769438}
   - component: {fileID: 33769437}
   m_Layer: 0
-  m_Name: CentreVille
+  m_Name: MainCity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1852,7 +1852,7 @@ GameObject:
   - component: {fileID: 118391226}
   - component: {fileID: 118391224}
   m_Layer: 0
-  m_Name: VFVBas
+  m_Name: VFVGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2297,7 +2297,7 @@ GameObject:
   - component: {fileID: 132514646}
   - component: {fileID: 132514645}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: hedge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2554,7 +2554,7 @@ GameObject:
   - component: {fileID: 137015083}
   - component: {fileID: 137015082}
   m_Layer: 0
-  m_Name: IWLac1
+  m_Name: IWLake1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2704,7 +2704,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_Name
-      value: PontVFCentre
+      value: BridgeVFCenter
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_RootOrder
@@ -3357,7 +3357,7 @@ GameObject:
   - component: {fileID: 207164749}
   - component: {fileID: 207164748}
   m_Layer: 0
-  m_Name: VFCBas
+  m_Name: VFCGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3937,7 +3937,7 @@ GameObject:
   - component: {fileID: 240416920}
   - component: {fileID: 240416919}
   m_Layer: 0
-  m_Name: CVVCVBas
+  m_Name: CVVCVGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4811,7 +4811,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_Name
-      value: PontVBVille
+      value: BridgeVBCity
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_RootOrder
@@ -4886,7 +4886,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_Name
-      value: PontVBCentre
+      value: BridgeVBCenter
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_RootOrder
@@ -5415,7 +5415,7 @@ GameObject:
   - component: {fileID: 346764792}
   - component: {fileID: 346764791}
   m_Layer: 0
-  m_Name: IWLac13
+  m_Name: IWLake13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5750,7 +5750,7 @@ GameObject:
   - component: {fileID: 375692747}
   - component: {fileID: 375692746}
   m_Layer: 0
-  m_Name: Panneau ABD
+  m_Name: Sign ABD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6418,7 +6418,7 @@ GameObject:
   - component: {fileID: 413969617}
   - component: {fileID: 413969616}
   m_Layer: 0
-  m_Name: IWLac19
+  m_Name: IWLake19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6949,7 +6949,7 @@ GameObject:
   - component: {fileID: 435250264}
   - component: {fileID: 435250263}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: hedge5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7026,12 +7026,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435250262}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 432.7, y: 62.57, z: -158.1}
+  m_LocalPosition: {x: 432.7, y: 62.57, z: 41.899994}
   m_LocalScale: {x: 3, y: 5, z: 35}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 1209955075}
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &442417964
 PrefabInstance:
@@ -7696,7 +7696,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_Name
-      value: PontVFVille
+      value: BridgeVFCity
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_RootOrder
@@ -8183,7 +8183,7 @@ GameObject:
   - component: {fileID: 533047512}
   - component: {fileID: 533047511}
   m_Layer: 0
-  m_Name: IWLac10
+  m_Name: IWLake10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8657,7 +8657,7 @@ GameObject:
   - component: {fileID: 581561853}
   - component: {fileID: 581561852}
   m_Layer: 0
-  m_Name: IWLac20
+  m_Name: IWLake20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8726,7 +8726,7 @@ GameObject:
   - component: {fileID: 591640628}
   - component: {fileID: 591640627}
   m_Layer: 0
-  m_Name: IWLac21
+  m_Name: IWLake21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8993,7 +8993,7 @@ GameObject:
   - component: {fileID: 608778000}
   - component: {fileID: 608777999}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: hedge2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10057,7 +10057,7 @@ GameObject:
   - component: {fileID: 678044753}
   - component: {fileID: 678044752}
   m_Layer: 0
-  m_Name: Panneau BP1
+  m_Name: Sign BP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10409,7 +10409,7 @@ GameObject:
   - component: {fileID: 693183263}
   - component: {fileID: 693183262}
   m_Layer: 0
-  m_Name: IWLac31
+  m_Name: IWLake31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10552,7 +10552,7 @@ GameObject:
   - component: {fileID: 699942716}
   - component: {fileID: 699942715}
   m_Layer: 0
-  m_Name: BoisSimple
+  m_Name: SimpleWood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12271,7 +12271,7 @@ GameObject:
   - component: {fileID: 832428916}
   - component: {fileID: 832428915}
   m_Layer: 0
-  m_Name: VilleD
+  m_Name: CityD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12597,7 +12597,7 @@ GameObject:
   - component: {fileID: 839567236}
   - component: {fileID: 839567235}
   m_Layer: 0
-  m_Name: IWLac16
+  m_Name: IWLake16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13079,7 +13079,7 @@ GameObject:
   - component: {fileID: 863320470}
   - component: {fileID: 863320469}
   m_Layer: 0
-  m_Name: VBBBas
+  m_Name: VBBGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13367,7 +13367,7 @@ GameObject:
   - component: {fileID: 869843075}
   - component: {fileID: 869843074}
   m_Layer: 0
-  m_Name: IWLac32
+  m_Name: IWLake32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13505,7 +13505,7 @@ GameObject:
   - component: {fileID: 871978536}
   - component: {fileID: 871978535}
   m_Layer: 0
-  m_Name: IWLac22
+  m_Name: IWLake22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13574,7 +13574,7 @@ GameObject:
   - component: {fileID: 877273277}
   - component: {fileID: 877273276}
   m_Layer: 0
-  m_Name: IWLac33
+  m_Name: IWLake33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14549,7 +14549,7 @@ GameObject:
   - component: {fileID: 951209763}
   - component: {fileID: 951209762}
   m_Layer: 0
-  m_Name: CVVVBas
+  m_Name: CVVVGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14967,7 +14967,7 @@ GameObject:
   - component: {fileID: 981617281}
   - component: {fileID: 981617280}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: hedge4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15044,12 +15044,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981617279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 325.5, y: 62.52, z: -114.32}
+  m_LocalPosition: {x: 325.5, y: 62.52, z: 85.68}
   m_LocalScale: {x: 3, y: 5, z: 35}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 1209955075}
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &982511167
 PrefabInstance:
@@ -15409,7 +15409,7 @@ GameObject:
   - component: {fileID: 999300992}
   - component: {fileID: 999300991}
   m_Layer: 0
-  m_Name: FermeH
+  m_Name: FarmH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15488,7 +15488,7 @@ GameObject:
   - component: {fileID: 999339018}
   - component: {fileID: 999339017}
   m_Layer: 0
-  m_Name: Panneau BP2
+  m_Name: Sign BP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16014,7 +16014,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_Name
-      value: PontCVVCentreVille
+      value: BridgeCVVMainCity
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_RootOrder
@@ -16763,7 +16763,7 @@ GameObject:
   - component: {fileID: 1113691711}
   - component: {fileID: 1113691710}
   m_Layer: 0
-  m_Name: IWLac14
+  m_Name: IWLake14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17023,7 +17023,7 @@ GameObject:
   - component: {fileID: 1118669882}
   - component: {fileID: 1118669881}
   m_Layer: 0
-  m_Name: OFVBasG
+  m_Name: OFVDownG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18573,7 +18573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1209955075}
   m_Layer: 0
-  m_Name: Parc
+  m_Name: Park
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18613,6 +18613,9 @@ Transform:
   - {fileID: 608777998}
   - {fileID: 1245396046}
   - {fileID: 1019079586}
+  - {fileID: 981617283}
+  - {fileID: 435250266}
+  - {fileID: 1243060532}
   m_Father: {fileID: 1491899210}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19424,7 +19427,7 @@ GameObject:
   - component: {fileID: 1243060530}
   - component: {fileID: 1243060529}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: hedge6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19501,12 +19504,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243060528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 432.7, y: 62.52, z: -114.32}
+  m_LocalPosition: {x: 432.7, y: 62.52, z: 85.68}
   m_LocalScale: {x: 3, y: 5, z: 35}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 1209955075}
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1245396045
 GameObject:
@@ -19521,7 +19524,7 @@ GameObject:
   - component: {fileID: 1245396048}
   - component: {fileID: 1245396047}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: hedge3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19692,7 +19695,7 @@ GameObject:
   - component: {fileID: 1262377730}
   - component: {fileID: 1262377729}
   m_Layer: 0
-  m_Name: IWLac27
+  m_Name: IWLake27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20517,7 +20520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1310207330}
   m_Layer: 0
-  m_Name: Ponts
+  m_Name: Bridges
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20656,7 +20659,7 @@ GameObject:
   - component: {fileID: 1320375992}
   - component: {fileID: 1320375991}
   m_Layer: 0
-  m_Name: IWLac26
+  m_Name: IWLake26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20944,7 +20947,7 @@ GameObject:
   - component: {fileID: 1337837525}
   - component: {fileID: 1337837524}
   m_Layer: 0
-  m_Name: IWLac15
+  m_Name: IWLake15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21406,7 +21409,7 @@ GameObject:
   - component: {fileID: 1373308071}
   - component: {fileID: 1373308070}
   m_Layer: 0
-  m_Name: IWLac11
+  m_Name: IWLake11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21481,7 +21484,7 @@ GameObject:
   - component: {fileID: 1376526920}
   - component: {fileID: 1376526919}
   m_Layer: 0
-  m_Name: IWLac9
+  m_Name: IWLake9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21923,7 +21926,7 @@ GameObject:
   - component: {fileID: 1395261228}
   - component: {fileID: 1395261227}
   m_Layer: 0
-  m_Name: IWLac3
+  m_Name: IWLake3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22058,7 +22061,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1415136756}
   m_Layer: 0
-  m_Name: PannG
+  m_Name: SignG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22393,7 +22396,7 @@ GameObject:
   - component: {fileID: 1435681662}
   - component: {fileID: 1435681661}
   m_Layer: 0
-  m_Name: IWLac34
+  m_Name: IWLake34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22461,7 +22464,7 @@ GameObject:
   - component: {fileID: 1446012635}
   - component: {fileID: 1446012634}
   m_Layer: 0
-  m_Name: VBVBas
+  m_Name: VBVGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22765,7 +22768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1455539249}
   m_Layer: 0
-  m_Name: PannD
+  m_Name: SignD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23346,7 +23349,7 @@ GameObject:
   - component: {fileID: 1467762434}
   - component: {fileID: 1467762433}
   m_Layer: 0
-  m_Name: IWLac6
+  m_Name: IWLake6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23657,7 +23660,7 @@ GameObject:
   - component: {fileID: 1478702210}
   - component: {fileID: 1478702209}
   m_Layer: 0
-  m_Name: IWLac4
+  m_Name: IWLake4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23869,7 +23872,7 @@ GameObject:
   - component: {fileID: 1491899209}
   - component: {fileID: 1491899208}
   m_Layer: 0
-  m_Name: VilleG
+  m_Name: CityG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24023,7 +24026,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_Name
-      value: PontCVVCentre
+      value: BridgeCVVCenter
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_RootOrder
@@ -25337,7 +25340,7 @@ GameObject:
   - component: {fileID: 1593565708}
   - component: {fileID: 1593565707}
   m_Layer: 0
-  m_Name: IWLac24
+  m_Name: IWLake24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25406,7 +25409,7 @@ GameObject:
   - component: {fileID: 1596012453}
   - component: {fileID: 1596012452}
   m_Layer: 0
-  m_Name: IWLac17
+  m_Name: IWLake17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25926,7 +25929,7 @@ GameObject:
   - component: {fileID: 1605219199}
   - component: {fileID: 1605219198}
   m_Layer: 0
-  m_Name: IWLac28
+  m_Name: IWLake28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26372,7 +26375,7 @@ GameObject:
   - component: {fileID: 1629329795}
   - component: {fileID: 1629329794}
   m_Layer: 0
-  m_Name: IWLac18
+  m_Name: IWLake18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26441,7 +26444,7 @@ GameObject:
   - component: {fileID: 1633677682}
   - component: {fileID: 1633677681}
   m_Layer: 0
-  m_Name: IWLac30
+  m_Name: IWLake30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26766,7 +26769,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_Name
-      value: PontCVVVille
+      value: BridgeCVVCity
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_RootOrder
@@ -26934,7 +26937,7 @@ GameObject:
   - component: {fileID: 1678312759}
   - component: {fileID: 1678312758}
   m_Layer: 0
-  m_Name: Bois
+  m_Name: Wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27071,7 +27074,7 @@ GameObject:
   - component: {fileID: 1683048546}
   - component: {fileID: 1683048545}
   m_Layer: 0
-  m_Name: IWLac5
+  m_Name: IWLake5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27298,7 +27301,7 @@ GameObject:
   - component: {fileID: 1699596678}
   - component: {fileID: 1699596677}
   m_Layer: 0
-  m_Name: IWLac7
+  m_Name: IWLake7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27516,7 +27519,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_Name
-      value: PontVBBois
+      value: BridgeVBWood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_RootOrder
@@ -27595,7 +27598,7 @@ GameObject:
   - component: {fileID: 1716981776}
   - component: {fileID: 1716981775}
   m_Layer: 0
-  m_Name: IWLac2
+  m_Name: IWLake2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27718,7 +27721,7 @@ GameObject:
   - component: {fileID: 1730917006}
   - component: {fileID: 1730917005}
   m_Layer: 0
-  m_Name: IWLac23
+  m_Name: IWLake23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28738,7 +28741,7 @@ GameObject:
   - component: {fileID: 1796566541}
   - component: {fileID: 1796566540}
   m_Layer: 0
-  m_Name: PanneauABG
+  m_Name: Sign ABG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29216,7 +29219,7 @@ GameObject:
   - component: {fileID: 1815744135}
   - component: {fileID: 1815744134}
   m_Layer: 0
-  m_Name: IWLac8
+  m_Name: IWLake8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29359,7 +29362,7 @@ GameObject:
   - component: {fileID: 1820297900}
   - component: {fileID: 1820297899}
   m_Layer: 0
-  m_Name: IWLac25
+  m_Name: IWLake25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29427,7 +29430,7 @@ GameObject:
   - component: {fileID: 1820334384}
   - component: {fileID: 1820334382}
   m_Layer: 0
-  m_Name: VFCBas
+  m_Name: VFCGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29627,7 +29630,7 @@ GameObject:
   - component: {fileID: 1830868281}
   - component: {fileID: 1830868285}
   m_Layer: 0
-  m_Name: riviere
+  m_Name: river
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30720,7 +30723,7 @@ GameObject:
   - component: {fileID: 1887034929}
   - component: {fileID: 1887034928}
   m_Layer: 0
-  m_Name: IWLac12
+  m_Name: IWLake12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31724,7 +31727,7 @@ GameObject:
   - component: {fileID: 1948421436}
   - component: {fileID: 1948421434}
   m_Layer: 0
-  m_Name: VFFBas
+  m_Name: VFFGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32345,7 +32348,7 @@ GameObject:
   - component: {fileID: 2006817153}
   - component: {fileID: 2006817152}
   m_Layer: 0
-  m_Name: VBCBas
+  m_Name: VBCGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33001,7 +33004,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_Name
-      value: PontVFFerme
+      value: BridgeVFFarm
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5df7984ec7d115e489379d6c5f095d71, type: 3}
       propertyPath: m_RootOrder
@@ -33625,7 +33628,7 @@ GameObject:
   - component: {fileID: 2138803582}
   - component: {fileID: 2138803581}
   m_Layer: 0
-  m_Name: IWLac29
+  m_Name: IWLake29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
