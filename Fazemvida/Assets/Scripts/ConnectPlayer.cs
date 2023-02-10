@@ -22,7 +22,6 @@ public class ConnectPlayer : MonoBehaviour
             playerSingleton.SetName(playerName);
             HandleJSON();
             SceneManager.LoadScene("Fazem");
-            SceneManager.UnloadSceneAsync("ConnexionScene");
         }
         else
         {
