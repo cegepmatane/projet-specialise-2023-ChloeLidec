@@ -11,6 +11,7 @@ public class ConnectPlayer : MonoBehaviour
     private TextAsset jsonFile;
     [SerializeField]
     public InputField playerNameInput;
+    public Text textInfo;
     // Start is called before the first frame update
     public void StartPlayer(){
         string playerName = playerNameInput.text;
@@ -19,14 +20,13 @@ public class ConnectPlayer : MonoBehaviour
         {
             playerSingleton = PlayerSingleton.Instance();
             playerSingleton.SetName(playerName);
-            Debug.Log("Player name: " + playerSingleton.playerName);
             HandleJSON();
             SceneManager.LoadScene("Fazem");
             SceneManager.UnloadSceneAsync("ConnexionScene");
         }
         else
         {
-            Debug.Log("Player name is incorrect");
+            textInfo.text = "Invalid username, please try again. Only letters, numbers, underscores and dashes are allowed.";
             playerNameInput.text = "Enter username...";
         }
     }
@@ -51,18 +51,23 @@ public class ConnectPlayer : MonoBehaviour
     private void HandleJSON()
     {
         // look for a file called "[playername].json" in the Resources folder
-        string jsonPath = playerSingleton.playerName + ".json";
-        if (Resources.Load<TextAsset>(jsonPath) != null)
+        bool fileExists = File.Exists(Application.dataPath + "/Resources/" + playerSingleton.playerName + ".json");
+        if (fileExists)
         {
+            jsonFile = Resources.Load<TextAsset>(playerSingleton.playerName);
             // if it exists, load it
-            JsonUtility.FromJson<PlayerSingleton>(jsonFile.text);
+            //get the money from the json file
+            Player player = JsonUtility.FromJson<Player>(jsonFile.text);
+            int money = player.GetMoney();
+            playerSingleton.SetMoney(money);
+            Debug.Log("Player money: " + playerSingleton.playerMoney);
         }
         else
         {
             // if it doesn't exist, create it
             playerSingleton.SetMoney(0);
             string json = JsonUtility.ToJson(playerSingleton);
-            File.WriteAllText(Application.dataPath + "/Resources/" + jsonPath, json);
+            File.WriteAllText(Application.dataPath + "/Resources/" + playerSingleton+ ".json", json);
         }
 
     }

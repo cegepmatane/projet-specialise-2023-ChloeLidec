@@ -701,6 +701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNameInput: {fileID: 1848983408}
+  textInfo: {fileID: 1528013603}
 --- !u!4 &1282541007
 Transform:
   m_ObjectHideFlags: 0
@@ -891,13 +892,25 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1282541006}
+        m_TargetAssemblyTypeName: ConnectPlayer, Assembly-CSharp
+        m_MethodName: StartPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnDidEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 6102eb4c7f584264aa2c3e585842a936, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 1282541006}
+        m_TargetAssemblyTypeName: ConnectPlayer, Assembly-CSharp
+        m_MethodName: StartPlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
