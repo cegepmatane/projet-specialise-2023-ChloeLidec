@@ -23,8 +23,10 @@ public class MenuController : MonoBehaviour
     public void ShowMenu(){
         //deactive the active vehicle if there is one and hide its UI
         vehicle = inOutVehicles.activeVehicle;
+        Debug.Log("vehicle is " + vehicle);
         if (vehicle != null)
         {
+            Debug.Log("vehicle is not null");
             mainUI.transform.Find("VehicleUI").gameObject.SetActive(false);
             vehicle.SetActive(false);
             vehicle.transform.Find("Vehicle Camera").gameObject.GetComponent<Camera>().enabled = false;
@@ -48,6 +50,7 @@ public class MenuController : MonoBehaviour
             playerFollow.SetActive(false);
             playerCapsule.SetActive(false);
         }
+        Debug.Log("ShowMenu");
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         inGameUI.SetActive(false);
         GameObject menuUI = mainUI.transform.Find("MenuUI").gameObject;

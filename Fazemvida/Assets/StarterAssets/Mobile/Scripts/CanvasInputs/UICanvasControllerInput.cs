@@ -9,6 +9,7 @@ namespace StarterAssets
         public StarterAssetsInputs starterAssetsInputs;
         public InOutVehicles inOutVehicles;
         public MenuController menuController;
+        public PrometeoCarController prometeoCarController;
         public void VirtualMoveInput(Vector2 virtualMoveDirection)
         {
             starterAssetsInputs.MoveInput(virtualMoveDirection);
@@ -30,12 +31,14 @@ namespace StarterAssets
         }
         public void VirtualEnterExitVehicleInput()
         {
+            starterAssetsInputs.StopInput();
             inOutVehicles.EnterExitVehicle();
         }
 
         public void VirtualShowMenuInput()
         {
             starterAssetsInputs.StopInput();
+            prometeoCarController.StopCar();
             menuController.ShowMenu();
         }
 
