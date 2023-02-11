@@ -59,7 +59,6 @@ public class ConnectPlayer : MonoBehaviour
             Player player = JsonUtility.FromJson<Player>(jsonFile.text);
             int money = player.GetMoney();
             playerSingleton.SetMoney(money);
-            Debug.Log("Player money: " + playerSingleton.playerMoney);
         }
         else
         {
