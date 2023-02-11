@@ -43,6 +43,13 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+		public void StopInput()
+		{
+			MoveInput(Vector2.zero);
+			LookInput(Vector2.zero);
+			JumpInput(false);
+			SprintInput(false);
+		}
 #endif
 
 

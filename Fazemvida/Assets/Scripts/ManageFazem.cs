@@ -24,4 +24,5 @@ public class ManageFazem : MonoBehaviour
         GameObject textCA = coinUI.transform.Find("CoinAmount").gameObject;
         textCA.GetComponent<UnityEngine.UI.Text>().text = playerSingleton.playerMoney.ToString();
     }
+
 }

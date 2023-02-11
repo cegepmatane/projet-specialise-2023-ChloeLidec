@@ -65,7 +65,7 @@ public class ConnectPlayer : MonoBehaviour
             // if it doesn't exist, create it
             playerSingleton.SetMoney(0);
             string json = JsonUtility.ToJson(playerSingleton);
-            File.WriteAllText(Application.dataPath + "/Resources/" + playerSingleton+ ".json", json);
+            File.WriteAllText(Application.dataPath + "/Resources/" + playerSingleton.playerName+ ".json", json);
         }
 
     }
