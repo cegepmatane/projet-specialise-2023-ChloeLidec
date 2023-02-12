@@ -8,6 +8,8 @@ public class MissionGBSingleton
     private static MissionGBSingleton instance;
     public float missionStartTime;
     public int nbOfCheckpointsPassed;
+    public bool stopped = true;
+    public float missionTime;
 
     private MissionGBSingleton()
     {
@@ -34,6 +36,19 @@ public class MissionGBSingleton
     public void PassCheckpoint()
     {
         nbOfCheckpointsPassed++;
+    }
+
+    public void ResetMission()
+    {
+        nbOfCheckpointsPassed = 0;
+        missionStartTime = 0;
+        stopped = false;
+    }
+
+    public void FinishMission()
+    {
+        stopped = true;
+        missionTime = Time.deltaTime - missionStartTime;
     }
 
     public void DeleteInstance()

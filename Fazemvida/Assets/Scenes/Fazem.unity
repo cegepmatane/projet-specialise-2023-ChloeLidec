@@ -19024,6 +19024,14 @@ MonoBehaviour:
   coinUI: {fileID: 1472685594}
   stopWatch: {fileID: 1111849477}
   checkpointText: {fileID: 1335164530}
+  checkpoints:
+  - {fileID: 1865845084}
+  - {fileID: 412210135}
+  - {fileID: 1720299924}
+  - {fileID: 718597460}
+  - {fileID: 396106112}
+  - {fileID: 1814186122}
+  - {fileID: 1448302674}
 --- !u!114 &1111849474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37139,6 +37147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c828bcefdb14d4f9c5d04811c94ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkpointUI: {fileID: 1335164530}
+  stopWatch: {fileID: 1111849477}
 --- !u!65 &2020123559
 BoxCollider:
   m_ObjectHideFlags: 0

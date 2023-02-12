@@ -9,13 +9,8 @@ public class CheckpointManager : MonoBehaviour
     public Text checkpointUI;
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Checkpoint");
-        Debug.Log(other.gameObject.tag);
-        Debug.Log(missionGBSingleton.missionStartTime);
-        Debug.Log(missionGBSingleton.missionStartTime != 0 );
-        if (other.gameObject.tag == "Player" && missionGBSingleton.missionStartTime != 0 )
+        if (other.gameObject.tag == "Player" && !missionGBSingleton.stopped )
         {
-            Debug.Log("Checkpoint passed");
             missionGBSingleton.PassCheckpoint();
             checkpointUI.text = "Checkpoints " + missionGBSingleton.nbOfCheckpointsPassed + "/7";
             //deactivate checkpoint
