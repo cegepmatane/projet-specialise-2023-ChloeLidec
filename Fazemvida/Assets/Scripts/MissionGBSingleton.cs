@@ -29,7 +29,7 @@ public class MissionGBSingleton
 
     public void SetMissionStartTime()
     {
-        missionStartTime = Time.time;
+        missionStartTime = Time.deltaTime;
     }
 
     public void PassCheckpoint()

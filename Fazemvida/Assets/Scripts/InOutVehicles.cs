@@ -37,11 +37,14 @@ public class InOutVehicles : MonoBehaviour
         mainUI.transform.Find("UI_Virtual_Button_Sprint").gameObject.SetActive(true);
         mainUI.transform.Find("UI_Virtual_Button_Jump").gameObject.SetActive(true);
 
+        
+        
+        activeVehicle.GetComponent<PrometeoCarController>().StopCar();
+        
         GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
         playerCapsule.SetActive(true);
         playerCapsule.transform.position = activeVehicle.transform.position + activeVehicle.transform.TransformDirection(Vector3.left * 2);
         
-        activeVehicle.GetComponent<PrometeoCarController>().StopCar();
         activeVehicle.transform.Find("Vehicle Camera").gameObject.GetComponent<Camera>().enabled = false;
         activeVehicle.GetComponent<PrometeoCarController>().enabled = false;
         prometeoCarController = null;

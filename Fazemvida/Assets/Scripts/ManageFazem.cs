@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 public class ManageFazem : MonoBehaviour
 {
     PlayerSingleton playerSingleton;
+    MissionGBSingleton missionGBSingleton;
+    
 
     [Header("Coin UI")]
     public GameObject coinUI;
+
+    [Header("Stopwatch")]
+    public StopWatch stopWatch;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +28,13 @@ public class ManageFazem : MonoBehaviour
         //update coin ammount
         GameObject textCA = coinUI.transform.Find("CoinAmount").gameObject;
         textCA.GetComponent<UnityEngine.UI.Text>().text = playerSingleton.playerMoney.ToString();
+    }
+
+    public void StartMissionGB()
+    {
+        missionGBSingleton = MissionGBSingleton.Instance();
+        missionGBSingleton.SetMissionStartTime();
+        stopWatch.StartSW();
     }
 
 }
