@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class noCarController : MonoBehaviour
 {
-    public GameObject[] vehicles;
     public InOutVehicles inOutVehicles;
 
     public void OnTriggerEnter(Collider other)

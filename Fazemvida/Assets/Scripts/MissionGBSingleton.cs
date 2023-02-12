@@ -6,7 +6,6 @@ using UnityEngine;
 public class MissionGBSingleton 
 {
     private static MissionGBSingleton instance;
-
     public float missionStartTime;
     public int nbOfCheckpointsPassed;
 

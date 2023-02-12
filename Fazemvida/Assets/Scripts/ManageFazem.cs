@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ManageFazem : MonoBehaviour
 {
@@ -12,8 +13,9 @@ public class ManageFazem : MonoBehaviour
     [Header("Coin UI")]
     public GameObject coinUI;
 
-    [Header("Stopwatch")]
+    [Header("MissionGB UI")]
     public StopWatch stopWatch;
+    public Text checkpointText;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,7 @@ public class ManageFazem : MonoBehaviour
         missionGBSingleton = MissionGBSingleton.Instance();
         missionGBSingleton.SetMissionStartTime();
         stopWatch.StartSW();
+        checkpointText.text = "Checkpoints 0/7";
     }
 
 }
