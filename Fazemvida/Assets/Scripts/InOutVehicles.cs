@@ -36,6 +36,9 @@ public class InOutVehicles : MonoBehaviour
         mainUI.transform.Find("UI_Virtual_Joystick_Look").gameObject.SetActive(true);
         mainUI.transform.Find("UI_Virtual_Button_Sprint").gameObject.SetActive(true);
         mainUI.transform.Find("UI_Virtual_Button_Jump").gameObject.SetActive(true);
+        GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
+        GameObject inGameUI2 = inGameUI.transform.Find("MenuBtn").gameObject;
+        inGameUI2.SetActive(true);
 
         
         
@@ -66,6 +69,9 @@ public class InOutVehicles : MonoBehaviour
                 GameObject look = mainUI.transform.Find("UI_Virtual_Joystick_Look").gameObject;
                 GameObject sprint = mainUI.transform.Find("UI_Virtual_Button_Sprint").gameObject;
                 GameObject jump = mainUI.transform.Find("UI_Virtual_Button_Jump").gameObject;
+                GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
+                GameObject inGameUI2 = inGameUI.transform.Find("MenuBtn").gameObject;
+                inGameUI2.SetActive(false);
                 move.SetActive(false);
                 look.SetActive(false);
                 sprint.SetActive(false);

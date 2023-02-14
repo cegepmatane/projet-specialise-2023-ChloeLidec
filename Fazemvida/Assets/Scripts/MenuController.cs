@@ -26,8 +26,11 @@ public class MenuController : MonoBehaviour
         playerPosition = human.transform.Find("PlayerCapsule").gameObject.transform.position;
         //deactive the active vehicle if there is one and hide its UI
         vehicle = inOutVehicles.activeVehicle;
+        
         if (vehicle != null)
         {
+            //save player positon as next to the vehicle
+            playerPosition = vehicle.transform.position + vehicle.transform.TransformDirection(Vector3.left * 2);
             mainUI.transform.Find("VehicleUI").gameObject.SetActive(false);
             vehicle.SetActive(false);
             vehicle.transform.Find("Vehicle Camera").gameObject.GetComponent<Camera>().enabled = false;

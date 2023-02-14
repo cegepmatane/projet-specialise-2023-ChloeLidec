@@ -16,6 +16,8 @@ public class ShowHideVehicleButton : MonoBehaviour
         private GameObject[] vehicles;
         [SerializeField]
         private GameObject player;
+        [SerializeField]
+        private GameObject menuUI;
 
         public void Start(){
             //hide the button
@@ -24,7 +26,7 @@ public class ShowHideVehicleButton : MonoBehaviour
         
         public void Update(){
             //if the player is close to a vehicle
-            if (IsPlayerCloseToVehicle()){
+            if (IsPlayerCloseToVehicle() && !menuUI.activeSelf){
                 //show the button
                 vehicleButton.SetActive(true);
             }
