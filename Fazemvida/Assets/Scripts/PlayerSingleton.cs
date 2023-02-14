@@ -8,6 +8,7 @@ public class PlayerSingleton
 
     public string playerName;
     public int playerMoney;
+    public Vector3 playerPosition;
 
     private PlayerSingleton()
     {
@@ -42,6 +43,11 @@ public class PlayerSingleton
     public void SetName(string name)
     {
         playerName = name;
+    }
+
+    public void SetPosition(Vector3 position)
+    {
+        playerPosition = position;
     }
 
 }

@@ -59,11 +59,22 @@ public class ConnectPlayer : MonoBehaviour
             Player player = JsonUtility.FromJson<Player>(jsonFile.text);
             int money = player.GetMoney();
             playerSingleton.SetMoney(money);
+            //if the player has no position, set it to the default position
+            if (player.GetPosition() == Vector3.zero)
+            {
+                playerSingleton.SetPosition(new Vector3(566.11f, 60.114f, 7.25f));
+            }
+            else
+            {
+                playerSingleton.SetPosition(player.GetPosition());
+            }
+            Debug.Log(playerSingleton.playerPosition);
         }
         else
         {
             // if it doesn't exist, create it
             playerSingleton.SetMoney(0);
+            playerSingleton.SetPosition(new Vector3(566.11f, 60.114f, 7.25f));
             string json = JsonUtility.ToJson(playerSingleton);
             File.WriteAllText(Application.dataPath + "/Resources/" + playerSingleton.playerName+ ".json", json);
         }

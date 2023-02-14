@@ -8,6 +8,7 @@ public class Player
     public string playerName;
     [SerializeField]
     public int playerMoney;
+    public Vector3 playerPosition;
 
     
     public Player(string name, int money)
@@ -26,5 +27,10 @@ public class Player
         return playerMoney;
     }
 
+    public Vector3 GetPosition()
+    {
+        return playerPosition;
+    }
 
+    
 }

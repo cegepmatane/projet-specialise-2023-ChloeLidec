@@ -13,6 +13,7 @@ public class MenuController : MonoBehaviour
     [Header("Player")]
     [SerializeField] private GameObject human = null;
     [SerializeField] private PlayerSingleton playerSingleton = PlayerSingleton.Instance();
+    private Vector3 playerPosition;
 
     [Header("Vehicles")]
     [SerializeField] private InOutVehicles inOutVehicles = null;
@@ -21,12 +22,12 @@ public class MenuController : MonoBehaviour
 
 
     public void ShowMenu(){
+        //save player position and rotation
+        playerPosition = human.transform.Find("PlayerCapsule").gameObject.transform.position;
         //deactive the active vehicle if there is one and hide its UI
         vehicle = inOutVehicles.activeVehicle;
-        Debug.Log("vehicle is " + vehicle);
         if (vehicle != null)
         {
-            Debug.Log("vehicle is not null");
             mainUI.transform.Find("VehicleUI").gameObject.SetActive(false);
             vehicle.SetActive(false);
             vehicle.transform.Find("Vehicle Camera").gameObject.GetComponent<Camera>().enabled = false;
@@ -50,7 +51,6 @@ public class MenuController : MonoBehaviour
             playerFollow.SetActive(false);
             playerCapsule.SetActive(false);
         }
-        Debug.Log("ShowMenu");
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         inGameUI.SetActive(false);
         GameObject menuUI = mainUI.transform.Find("MenuUI").gameObject;
@@ -90,6 +90,8 @@ public class MenuController : MonoBehaviour
     }
 
     public void Save(){
+        //save player position and rotation
+        playerSingleton.SetPosition(playerPosition);
         string json = JsonUtility.ToJson(playerSingleton);
         //overwrite the file with the new data
         File.WriteAllText(Application.dataPath + "/Resources/" + playerSingleton.playerName + ".json", json);

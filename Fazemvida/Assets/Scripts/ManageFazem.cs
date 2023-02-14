@@ -9,6 +9,8 @@ public class ManageFazem : MonoBehaviour
     PlayerSingleton playerSingleton;
     MissionGBSingleton missionGBSingleton;
     
+    [Header("Human")]
+    public GameObject human;
 
     [Header("Coin UI")]
     public GameObject coinUI;
@@ -23,6 +25,8 @@ public class ManageFazem : MonoBehaviour
         playerSingleton = PlayerSingleton.Instance();
         GameObject textCA = coinUI.transform.Find("CoinAmount").gameObject;
         textCA.GetComponent<UnityEngine.UI.Text>().text = playerSingleton.playerMoney.ToString();
+        GameObject capsule = human.transform.Find("PlayerCapsule").gameObject;
+        capsule.transform.position = new Vector3(playerSingleton.playerPosition[0], playerSingleton.playerPosition[1], playerSingleton.playerPosition[2]);
     }
 
     // Update is called once per frame
