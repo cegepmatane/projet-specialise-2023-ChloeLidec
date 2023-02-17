@@ -11,6 +11,8 @@ public class ShowHideMGBButton : MonoBehaviour
         public GameObject player;
         [SerializeField]
         private GameObject menuUI;
+        [SerializeField]
+        private GameObject menuMissionUI;
 
         public void Start(){
             //hide the button
@@ -19,7 +21,7 @@ public class ShowHideMGBButton : MonoBehaviour
         
         public void Update(){
             //if the player is close to a vehicle
-            if (IsPlayerCloseToPole() && !menuUI.activeSelf){
+            if (IsPlayerCloseToPole() && !menuUI.activeSelf && !menuMissionUI.activeSelf){
                 //show the button
                 missionButton.SetActive(true);
             }

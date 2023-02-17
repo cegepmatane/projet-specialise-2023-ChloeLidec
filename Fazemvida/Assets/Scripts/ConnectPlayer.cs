@@ -68,7 +68,6 @@ public class ConnectPlayer : MonoBehaviour
             {
                 playerSingleton.SetPosition(player.GetPosition());
             }
-            Debug.Log(playerSingleton.playerPosition);
         }
         else
         {
