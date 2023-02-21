@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ConnexionScene.unity
+    guid: 06b5ad1b5f2e2844eb236a154263bed0
+  - enabled: 1
+    path: Assets/Scenes/Fazem.unity
+    guid: 1886a3af1282ed845965ec4ca70516d9
   m_configObjects: {}
