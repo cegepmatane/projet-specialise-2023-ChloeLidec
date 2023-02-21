@@ -20,7 +20,7 @@ public class ShowHideMGBButton : MonoBehaviour
         }
         
         public void Update(){
-            //if the player is close to a vehicle
+            //if the player is close to th pole
             if (IsPlayerCloseToPole() && !menuUI.activeSelf && !menuMissionUI.activeSelf){
                 //show the button
                 missionButton.SetActive(true);
@@ -31,7 +31,7 @@ public class ShowHideMGBButton : MonoBehaviour
             }
         }
 
-        //check if the player is close to a vehicle
+        //check if the player is close to the pole
         public bool IsPlayerCloseToPole(){
             GameObject playerCapsule = player.transform.Find("PlayerCapsule").gameObject;
             if (Vector3.Distance(staringMissionPole.transform.position, playerCapsule.transform.position) < 2){

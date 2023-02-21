@@ -60,7 +60,9 @@ public class InOutVehicles : MonoBehaviour
         {
             //get the PlayerCapsule of the human
             GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
-            if (Vector3.Distance(vehicle.transform.position, playerCapsule.transform.position) < 2)
+            int distance = 2;
+            if(vehicle.tag=="Boat"){distance = 15;}
+            if (Vector3.Distance(vehicle.transform.position, playerCapsule.transform.position) < distance)
             {
                 //active the vehicle UI
                 mainUI.transform.Find("VehicleUI").gameObject.SetActive(true);

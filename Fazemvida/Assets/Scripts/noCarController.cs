@@ -8,7 +8,7 @@ public class noCarController : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Vehicle")
+        if (other.gameObject.tag == "Vehicle" || other.gameObject.tag == "Boat")
         {
             inOutVehicles.EnterExitVehicle();
         }

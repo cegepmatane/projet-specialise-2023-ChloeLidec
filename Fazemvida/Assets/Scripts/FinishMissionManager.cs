@@ -12,6 +12,8 @@ public class FinishMissionManager : MonoBehaviour
     public PlayerSingleton playerSingleton = PlayerSingleton.Instance();
     public GameObject human = null;
     public GameObject mainUI = null;
+    [Header("Coin UI")]
+    public GameObject coinUI;
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player" && !missionGBSingleton.stopped )
@@ -84,6 +86,9 @@ public class FinishMissionManager : MonoBehaviour
 
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         inGameUI.SetActive(true);
+        //update coin ammount
+        GameObject textCA = coinUI.transform.Find("CoinAmount").gameObject;
+        textCA.GetComponent<UnityEngine.UI.Text>().text = playerSingleton.playerMoney.ToString();
         GameObject menuUI = mainUI.transform.Find("EndMGBUI").gameObject;
         menuUI.SetActive(false);
 }

@@ -42,13 +42,15 @@ public class ShowHideVehicleButton : MonoBehaviour
             foreach (GameObject vehicle in vehicles){
             //if the player is close to the vehicle
             GameObject playerCapsule = player.transform.Find("PlayerCapsule").gameObject;
-            if (Vector3.Distance(vehicle.transform.position, playerCapsule.transform.position) < 2){
-                    //return true
+            //si le nom est Prometheus 1
+            int distance = 2;
+            if(vehicle.tag=="Boat"){distance = 15;}
+            if (Vector3.Distance(vehicle.transform.position, playerCapsule.transform.position) < distance){
                     return true;
                 }
             //if the player is in a vehicle
             if (inOutVehicles.activeVehicle != null){
-                    //return true
+                    
                     return true;
                 }
             }
