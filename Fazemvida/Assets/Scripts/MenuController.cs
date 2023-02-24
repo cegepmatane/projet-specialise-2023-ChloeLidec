@@ -97,6 +97,6 @@ public class MenuController : MonoBehaviour
         playerSingleton.SetPosition(playerPosition);
         string json = JsonUtility.ToJson(playerSingleton);
         //overwrite the file with the new data
-        File.WriteAllText(Application.dataPath + "/Resources/" + playerSingleton.playerName + ".json", json);
+        File.WriteAllText(Application.persistentDataPath + "" + playerSingleton.playerName + ".json", json);
     }
 }

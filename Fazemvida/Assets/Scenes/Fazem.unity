@@ -17959,10 +17959,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2350058031404111781, guid: cb981083fb04e454993bd612f61f36f0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2756161245754795952, guid: cb981083fb04e454993bd612f61f36f0,
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2798787354462298965, guid: cb981083fb04e454993bd612f61f36f0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2847525949359012301, guid: cb981083fb04e454993bd612f61f36f0,
         type: 3}
@@ -18006,6 +18016,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90.598
       objectReference: {fileID: 0}
+    - target: {fileID: 4516980660217037521, guid: cb981083fb04e454993bd612f61f36f0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4575599446629713621, guid: cb981083fb04e454993bd612f61f36f0,
         type: 3}
       propertyPath: m_Enabled
@@ -18017,6 +18032,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5893029891874791259, guid: bd9a454e38c659042a64aed151907719,
         type: 3}
+    - target: {fileID: 5534550323598598708, guid: cb981083fb04e454993bd612f61f36f0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6112617016551088393, guid: cb981083fb04e454993bd612f61f36f0,
         type: 3}
       propertyPath: m_Mesh
@@ -28313,6 +28333,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05373ac36ded04d44a3640892fe02beb, type: 3}
+--- !u!114 &935712935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593809138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5e5a34f7b23fd4293ea11440067e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 90
+  maxReverseSpeed: 45
+  accelerationMultiplier: 2
+  maxSteeringAngle: 27
+  steeringSpeed: 0.5
+  brakeForce: 350
+  decelerationMultiplier: 2
+  handbrakeDriftMultiplier: 5
+  bodyMassCenter: {x: 0, y: 0, z: 0}
+  useUI: 1
+  boatSpeedText: {fileID: 1977382445}
+  useTouchControls: 1
+  throttleButton: {fileID: 1212085765}
+  reverseButton: {fileID: 1582694079}
+  turnRightButton: {fileID: 1662653111}
+  turnLeftButton: {fileID: 732592556}
+  boatSpeed: 0
+  isDrifting: 0
+  isTractionLocked: 0
 --- !u!1001 &939038970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62598,6 +62649,10 @@ PrefabInstance:
       propertyPath: useTouchControls
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 901333271, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed,
         type: 3}
       propertyPath: m_RootOrder
@@ -62662,6 +62717,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Vehicle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017544330230184320, guid: 79d0ca8b77e301442afdb49f102e8aed,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}

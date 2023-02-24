@@ -8,7 +8,7 @@ using System.IO;
 public class ConnectPlayer : MonoBehaviour
 {   
     private PlayerSingleton playerSingleton;
-    private TextAsset jsonFile;
+    private string jsonFile;
     [SerializeField]
     public InputField playerNameInput;
     public Text textInfo;
@@ -22,6 +22,7 @@ public class ConnectPlayer : MonoBehaviour
             playerSingleton.SetName(playerName);
             HandleJSON();
             SceneManager.LoadScene("Fazem");
+            Debug.Log("Player name: " + playerSingleton.playerPosition);
         }
         else
         {
@@ -49,14 +50,14 @@ public class ConnectPlayer : MonoBehaviour
     }
     private void HandleJSON()
     {
-        // look for a file called "[playername].json" in the Resources folder
-        bool fileExists = File.Exists(Application.dataPath + "/Resources/" + playerSingleton.playerName + ".json");
+        // look for a file called "[playername].json" in the Resources folder check with Resources.Load<TextAsset>(playername)
+        bool fileExists = File.Exists(Application.persistentDataPath + "" + playerSingleton.playerName + ".json");
         if (fileExists)
         {
-            jsonFile = Resources.Load<TextAsset>(playerSingleton.playerName);
+            jsonFile = File.ReadAllText(Application.persistentDataPath + "" + playerSingleton.playerName + ".json");
             // if it exists, load it
             //get the money from the json file
-            Player player = JsonUtility.FromJson<Player>(jsonFile.text);
+            Player player = JsonUtility.FromJson<Player>(jsonFile);
             int money = player.GetMoney();
             playerSingleton.SetMoney(money);
             //if the player has no position, set it to the default position
@@ -75,7 +76,10 @@ public class ConnectPlayer : MonoBehaviour
             playerSingleton.SetMoney(0);
             playerSingleton.SetPosition(new Vector3(566.11f, 60.114f, 7.25f));
             string json = JsonUtility.ToJson(playerSingleton);
-            File.WriteAllText(Application.dataPath + "/Resources/" + playerSingleton.playerName+ ".json", json);
+            //get the path to the file for android
+            string path = Application.persistentDataPath + "" + playerSingleton.playerName + ".json";
+            //create the file and directory if it doesn't exist
+            File.WriteAllText(path, json);
         }
 
     }
