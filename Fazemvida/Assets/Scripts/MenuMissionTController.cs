@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 
-public class MenuMissionGBController : MonoBehaviour
+public class MenuMissionTController : MonoBehaviour
 {   
     [SerializeField] private ManageFazem mainScript = null;
     [Header("UI")]
@@ -35,11 +35,11 @@ public class MenuMissionGBController : MonoBehaviour
         
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         inGameUI.SetActive(false);
-        GameObject menuUI = mainUI.transform.Find("StartMGBUI").gameObject;
+        GameObject menuUI = mainUI.transform.Find("StartMTUI").gameObject;
         menuUI.SetActive(true);
 
         //if the player is in the mission, launch again and change the text of the button
-        if(mainScript.missionStarted == "GB"){
+        if(playerSingleton.GetMissionT()){
             GameObject button = menuUI.transform.Find("LaunchMission").gameObject;
             button.GetComponentInChildren<Text>().text = "Relancer la mission";
         }
@@ -65,12 +65,12 @@ public class MenuMissionGBController : MonoBehaviour
         
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         inGameUI.SetActive(true);
-        GameObject menuUI = mainUI.transform.Find("StartMGBUI").gameObject;
+        GameObject menuUI = mainUI.transform.Find("StartMTUI").gameObject;
         menuUI.SetActive(false);
     }
 
     public void StartMission(){
         HideMenu();
-        mainScript.StartMissionGB();
+        mainScript.StartMissionTaxi();
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShowHideMGBButton : MonoBehaviour
+public class ShowHideMTaxiButton : MonoBehaviour
     {
 
         [Header("Button")]
@@ -13,7 +13,7 @@ public class ShowHideMGBButton : MonoBehaviour
         private GameObject menuUI;
         [SerializeField]
         private GameObject menuMissionUI;
-        public ManageFazem mainScript = null;
+
         public void Start(){
             //hide the button
             missionButton.SetActive(false);
@@ -21,7 +21,7 @@ public class ShowHideMGBButton : MonoBehaviour
         
         public void Update(){
             //if the player is close to th pole
-            if (IsPlayerCloseToPole() && !menuUI.activeSelf && !menuMissionUI.activeSelf && (mainScript.missionStarted()=="GB" || mainScript.missionStarted()=="none")){
+            if (IsPlayerCloseToPole() && !menuUI.activeSelf && !menuMissionUI.activeSelf && (mainScript.missionStarted()=="Taxi" || mainScript.missionStarted()=="none")){
                 //show the button
                 missionButton.SetActive(true);
             }

@@ -8,6 +8,8 @@ public class ManageFazem : MonoBehaviour
 {
     PlayerSingleton playerSingleton;
     MissionGBSingleton missionGBSingleton;
+    MissionTaxiSingleton missionTaxiSingleton;
+
     
     [Header("Human")]
     public GameObject human;
@@ -35,6 +37,18 @@ public class ManageFazem : MonoBehaviour
         
     }
 
+    public string missionStarted(){
+        if (missionGBSingleton.missionStarted){
+            return "GB";
+        }
+        else if (missionTaxiSingleton.missionStarted){
+            return "Taxi";
+        }
+        else{
+            return "none";
+        }
+    }
+
     public void StartMissionGB()
     {
         //reset mission
@@ -47,6 +61,10 @@ public class ManageFazem : MonoBehaviour
         }
         stopWatch.StartSW();
         checkpointText.text = "Checkpoints 0/7";
+    }
+
+    public void StartMissionTaxi(){
+
     }
 
 }

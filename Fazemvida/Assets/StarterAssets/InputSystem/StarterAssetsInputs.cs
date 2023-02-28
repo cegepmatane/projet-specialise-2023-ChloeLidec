@@ -43,13 +43,6 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
-		public void StopInput()
-		{
-			MoveInput(Vector2.zero);
-			LookInput(Vector2.zero);
-			JumpInput(false);
-			SprintInput(false);
-		}
 #endif
 
 
@@ -82,7 +75,7 @@ namespace StarterAssets
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
-		public void StopInput2()
+		public void StopInput()
 		{
 			MoveInput(Vector2.zero);
 			LookInput(Vector2.zero);
