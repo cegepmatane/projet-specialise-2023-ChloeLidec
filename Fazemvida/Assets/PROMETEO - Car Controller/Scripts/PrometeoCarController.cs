@@ -520,7 +520,7 @@ public class PrometeoCarController : MonoBehaviour
       }else{
         if(Mathf.RoundToInt(carSpeed) < maxSpeed){
           if (gameObject.tag =="Boat"){
-            speed = 200f;
+            speed = 400f;
           }
           else{
             speed = 50f;
@@ -786,6 +786,10 @@ public class PrometeoCarController : MonoBehaviour
 
     // This function is used to stop the car instantly.
     public void StopCar(){
+      //stop steering and drifting
+      isTractionLocked = true;
+      isDrifting = false;
+      //stop the car
       while (carSpeed > 0f){
         carSpeed = carSpeed - (Time.deltaTime * 10f);
         if(carSpeed < 0f){
