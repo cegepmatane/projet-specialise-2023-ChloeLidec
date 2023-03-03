@@ -19,8 +19,6 @@ public class FinishMissionManager : MonoBehaviour
     public GameObject coinUI;
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("FinishMissionManager: OnTriggerEnter");
-        Debug.Log("FinishMissionManager: other.gameObject name = " + other.gameObject.name);
         if (other.gameObject.tag == "Player" && !missionGBSingleton.stopped )
         {
             stopWatch.Finish();
@@ -80,7 +78,6 @@ public class FinishMissionManager : MonoBehaviour
             taxiPosition = taxi.transform.position;
             taxi.SetActive(false);
             float missionTime = missionTaxiSingleton.missionTime;
-            Debug.Log("missionTime = " + missionTime);
             //calculate reward
             int reward = 0;
             float timeDiff = 360 - missionTime;
