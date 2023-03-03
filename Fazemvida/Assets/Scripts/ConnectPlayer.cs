@@ -22,7 +22,6 @@ public class ConnectPlayer : MonoBehaviour
             playerSingleton.SetName(playerName);
             HandleJSON();
             SceneManager.LoadScene("Fazem");
-            Debug.Log("Player name: " + playerSingleton.playerPosition);
         }
         else
         {

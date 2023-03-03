@@ -11025,7 +11025,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343495285}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -12702,6 +12702,30 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 627556911, guid: 41b8f021cfb3eb44f8c4b4b43d30640f, type: 3}
+      propertyPath: carSpeedText
+      value: 
+      objectReference: {fileID: 1977382445}
+    - target: {fileID: 627556911, guid: 41b8f021cfb3eb44f8c4b4b43d30640f, type: 3}
+      propertyPath: reverseButton
+      value: 
+      objectReference: {fileID: 1582694079}
+    - target: {fileID: 627556911, guid: 41b8f021cfb3eb44f8c4b4b43d30640f, type: 3}
+      propertyPath: throttleButton
+      value: 
+      objectReference: {fileID: 1212085765}
+    - target: {fileID: 627556911, guid: 41b8f021cfb3eb44f8c4b4b43d30640f, type: 3}
+      propertyPath: turnLeftButton
+      value: 
+      objectReference: {fileID: 732592556}
+    - target: {fileID: 627556911, guid: 41b8f021cfb3eb44f8c4b4b43d30640f, type: 3}
+      propertyPath: handbrakeButton
+      value: 
+      objectReference: {fileID: 407432779}
+    - target: {fileID: 627556911, guid: 41b8f021cfb3eb44f8c4b4b43d30640f, type: 3}
+      propertyPath: turnRightButton
+      value: 
+      objectReference: {fileID: 1662653111}
     - target: {fileID: 261786959625234688, guid: 41b8f021cfb3eb44f8c4b4b43d30640f,
         type: 3}
       propertyPath: m_RootOrder
@@ -12781,6 +12805,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 642287924342879162, guid: 41b8f021cfb3eb44f8c4b4b43d30640f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41b8f021cfb3eb44f8c4b4b43d30640f, type: 3}
@@ -19438,7 +19467,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625857570}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -19699,7 +19728,7 @@ PrefabInstance:
     - target: {fileID: 413722335, guid: 9e55d9b4642484f41be20c69a9b48063, type: 3}
       propertyPath: buttonClickOutputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1111849479}
+      objectReference: {fileID: 1111849481}
     - target: {fileID: 413722335, guid: 9e55d9b4642484f41be20c69a9b48063, type: 3}
       propertyPath: buttonStateOutputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -19718,7 +19747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 413722335, guid: 9e55d9b4642484f41be20c69a9b48063, type: 3}
       propertyPath: buttonClickOutputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MenuMissionGBController, Assembly-CSharp
+      value: MenuMissionTController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 413722335, guid: 9e55d9b4642484f41be20c69a9b48063, type: 3}
       propertyPath: buttonStateOutputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -20424,16 +20453,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643982618}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 4.75, y: -2.12, z: 1.47}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 601226824}
   - {fileID: 963187861}
   m_Father: {fileID: 400071892}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &643982620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24665,6 +24694,11 @@ PrefabInstance:
       propertyPath: prometeoCarController
       value: 
       objectReference: {fileID: 260505922}
+    - target: {fileID: 4253012991126813748, guid: 035bf1ba97d19214580cfe6f5a29fdc3,
+        type: 3}
+      propertyPath: menuMissionTController
+      value: 
+      objectReference: {fileID: 1111849481}
     - target: {fileID: 4253012991126813748, guid: 035bf1ba97d19214580cfe6f5a29fdc3,
         type: 3}
       propertyPath: menuMissionGBController
@@ -34326,6 +34360,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   human: {fileID: 690872197}
   coinUI: {fileID: 1472685594}
+  mainUI: {fileID: 797991153}
+  vehicleUI: {fileID: 2069005414}
   stopWatch: {fileID: 1111849477}
   checkpointText: {fileID: 1335164530}
   checkpoints:
@@ -34336,8 +34372,12 @@ MonoBehaviour:
   - {fileID: 396106112}
   - {fileID: 1814186122}
   - {fileID: 1448302674}
-  taxi: {fileID: 0}
-  possibleDestinations: []
+  taxi: {fileID: 400071893}
+  possibleDestinations:
+  - {fileID: 1600308952}
+  - {fileID: 343495285}
+  - {fileID: 2139033757}
+  - {fileID: 625857570}
 --- !u!114 &1111849474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51773,7 +51813,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600308952}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -54247,7 +54287,7 @@ PrefabInstance:
       objectReference: {fileID: 1402066613}
     - target: {fileID: 413722335, guid: 9e55d9b4642484f41be20c69a9b48063, type: 3}
       propertyPath: buttonStateOutputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: VirtualStartMissionGBInput
+      value: VirtualStartMissionTaxiInput
       objectReference: {fileID: 0}
     - target: {fileID: 998461505230474078, guid: 9e55d9b4642484f41be20c69a9b48063,
         type: 3}
@@ -60189,7 +60229,7 @@ PrefabInstance:
     - target: {fileID: 4091757288130996202, guid: 9e55d9b4642484f41be20c69a9b48063,
         type: 3}
       propertyPath: m_Name
-      value: MenuBtn (1)
+      value: MenuBtn
       objectReference: {fileID: 0}
     - target: {fileID: 6604053163029732620, guid: 9e55d9b4642484f41be20c69a9b48063,
         type: 3}
@@ -63096,7 +63136,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_AnchoredPosition: {x: -1315, y: -128}
   m_SizeDelta: {x: 300, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1977382445
@@ -64612,6 +64652,105 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2043289219}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2044336938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2044336939}
+  - component: {fileID: 2044336942}
+  - component: {fileID: 2044336941}
+  - component: {fileID: 2044336940}
+  m_Layer: 0
+  m_Name: Vehicle Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2044336939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044336938}
+  m_LocalRotation: {x: 0.21662878, y: -0, z: -0, w: 0.97625405}
+  m_LocalPosition: {x: -0.3, y: 5.300003, z: -7.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 400071892}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 25.022, y: 0, z: 0}
+--- !u!114 &2044336940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044336938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e860f72051039f44191bb7dedf1fea5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 400071892}
+  smoothing: 1.5
+--- !u!124 &2044336941
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044336938}
+  m_Enabled: 1
+--- !u!20 &2044336942
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044336938}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 2000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1001 &2044610150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66319,14 +66458,14 @@ PrefabInstance:
     - target: {fileID: 413722335, guid: 9e55d9b4642484f41be20c69a9b48063, type: 3}
       propertyPath: buttonStateOutputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1111849479}
+      objectReference: {fileID: 1111849481}
     - target: {fileID: 413722335, guid: 9e55d9b4642484f41be20c69a9b48063, type: 3}
       propertyPath: buttonStateOutputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HideMenu
       objectReference: {fileID: 0}
     - target: {fileID: 413722335, guid: 9e55d9b4642484f41be20c69a9b48063, type: 3}
       propertyPath: buttonStateOutputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MenuMissionGBController, Assembly-CSharp
+      value: MenuMissionTController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2478905580774955251, guid: 9e55d9b4642484f41be20c69a9b48063,
         type: 3}
@@ -67275,7 +67414,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139033757}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2

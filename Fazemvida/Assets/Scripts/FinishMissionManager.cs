@@ -18,6 +18,8 @@ public class FinishMissionManager : MonoBehaviour
     public GameObject coinUI;
     public void OnTriggerEnter(Collider other)
     {
+        Debug.Log("FinishMissionManager: OnTriggerEnter");
+        Debug.Log("FinishMissionManager: other.gameObject.tag = " + other.gameObject.tag);
         if (other.gameObject.tag == "Player" && !missionGBSingleton.stopped )
         {
             stopWatch.Finish();
