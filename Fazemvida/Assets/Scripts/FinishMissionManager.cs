@@ -14,6 +14,7 @@ public class FinishMissionManager : MonoBehaviour
     public GameObject human = null;
     public GameObject mainUI = null;
     public GameObject taxi = null;
+    private Vector3 taxiPosition = new Vector3(0, 0, 0);
     [Header("Coin UI")]
     public GameObject coinUI;
     public void OnTriggerEnter(Collider other)
@@ -76,6 +77,7 @@ public class FinishMissionManager : MonoBehaviour
             stopWatch.Finish();
             missionTaxiSingleton.FinishMission();
             missionTaxiSingleton.destination.SetActive(false);
+            taxiPosition = taxi.transform.position;
             taxi.SetActive(false);
             float missionTime = missionTaxiSingleton.missionTime;
             Debug.Log("missionTime = " + missionTime);
@@ -97,7 +99,7 @@ public class FinishMissionManager : MonoBehaviour
             look.SetActive(false);
             sprint.SetActive(false);
             jump.SetActive(false);
-             GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
+            GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
             GameObject MainCamera = human.transform.Find("MainCamera").gameObject;
             GameObject playerFollow = human.transform.Find("PlayerFollowCamera").gameObject;
             MainCamera.SetActive(false);
@@ -135,8 +137,9 @@ public class FinishMissionManager : MonoBehaviour
         //update coin ammount
         GameObject textCA = coinUI.transform.Find("CoinAmount").gameObject;
         textCA.GetComponent<UnityEngine.UI.Text>().text = playerSingleton.playerMoney.ToString();
-        GameObject menuUI = mainUI.transform.Find("EndMTUI").gameObject;
-        menuUI.SetActive(false);
+        mainUI.transform.Find("EndMTUI").gameObject.SetActive(false);
+        mainUI.transform.Find("EndMGBUI").gameObject.SetActive(false);
+        mainUI.transform.Find("VehicleUI").gameObject.SetActive(false);
 }
 }
 
