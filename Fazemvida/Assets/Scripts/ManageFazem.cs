@@ -17,10 +17,16 @@ public class ManageFazem : MonoBehaviour
     [Header("Coin UI")]
     public GameObject coinUI;
 
-    [Header("MissionGB")]
+    [Header("Missions")]
     public StopWatch stopWatch;
+
+    [Header("MissionGB")]
     public Text checkpointText;
     public GameObject[] checkpoints;
+
+    [Header("MissionTaxi")]
+    public GameObject taxi;
+    public GameObject[] possibleDestinations;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,10 +44,10 @@ public class ManageFazem : MonoBehaviour
     }
 
     public string missionStarted(){
-        if (missionGBSingleton.missionStarted){
+        if (! missionGBSingleton.stopped){
             return "GB";
         }
-        else if (missionTaxiSingleton.missionStarted){
+        else if (! missionTaxiSingleton.stopped){
             return "Taxi";
         }
         else{
@@ -64,7 +70,18 @@ public class ManageFazem : MonoBehaviour
     }
 
     public void StartMissionTaxi(){
-
+        missionTaxiSingleton = MissionTaxiSingleton.Instance();
+        missionTaxiSingleton.ResetMission();
+        //get random destination from possibleDestinations
+        int randomIndex = Random.Range(0, possibleDestinations.Length);
+        GameObject destination = possibleDestinations[randomIndex];
+        missionTaxiSingleton.SetDestination(destination);
+        destination.SetActive(true);
+        taxi.SetActive(true);
+        taxi.transform.position = new Vector3(playerSingleton.playerPosition[0] + 10, playerSingleton.playerPosition[1], playerSingleton.playerPosition[2]);
+        missionTaxiSingleton.SetMissionStartTime();
+        stopWatch.StartSW();
+        
     }
 
 }

@@ -13,7 +13,8 @@ public class ShowHideMGBButton : MonoBehaviour
         private GameObject menuUI;
         [SerializeField]
         private GameObject menuMissionUI;
-        public ManageFazem mainScript = null;
+        [SerializeField]
+        private ManageFazem mainScript = null;
         public void Start(){
             //hide the button
             missionButton.SetActive(false);

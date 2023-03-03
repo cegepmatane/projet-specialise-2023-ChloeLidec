@@ -7,14 +7,13 @@ public class MissionTaxiSingleton
 {
     private static MissionTaxiSingleton instance;
     public float missionStartTime;
-    public int nbOfCheckpointsPassed;
     public bool stopped = true;
     public float missionTime;
+    public GameObject destination;
 
     private MissionTaxiSingleton()
     {
         missionStartTime = 0;
-        nbOfCheckpointsPassed = 0;
     }
 
     public static MissionTaxiSingleton Instance()
@@ -22,7 +21,7 @@ public class MissionTaxiSingleton
         {
             if (instance == null)
             {
-                instance = new MissionGBSingleton();
+                instance = new MissionTaxiSingleton();
             }
             return instance;
         }
@@ -33,14 +32,13 @@ public class MissionTaxiSingleton
         missionStartTime = Time.deltaTime;
     }
 
-    public void PassCheckpoint()
+    public void SetDestination(GameObject dest)
     {
-        nbOfCheckpointsPassed++;
+        destination = dest;
     }
 
     public void ResetMission()
     {
-        nbOfCheckpointsPassed = 0;
         missionStartTime = 0;
         stopped = false;
     }

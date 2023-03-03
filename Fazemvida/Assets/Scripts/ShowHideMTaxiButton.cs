@@ -13,6 +13,8 @@ public class ShowHideMTaxiButton : MonoBehaviour
         private GameObject menuUI;
         [SerializeField]
         private GameObject menuMissionUI;
+        [SerializeField]
+        private ManageFazem mainScript;
 
         public void Start(){
             //hide the button

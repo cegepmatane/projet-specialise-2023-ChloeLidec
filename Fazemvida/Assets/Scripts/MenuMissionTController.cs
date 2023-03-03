@@ -39,7 +39,7 @@ public class MenuMissionTController : MonoBehaviour
         menuUI.SetActive(true);
 
         //if the player is in the mission, launch again and change the text of the button
-        if(playerSingleton.GetMissionT()){
+        if(mainScript.missionStarted() == "Taxi"){
             GameObject button = menuUI.transform.Find("LaunchMission").gameObject;
             button.GetComponentInChildren<Text>().text = "Relancer la mission";
         }
