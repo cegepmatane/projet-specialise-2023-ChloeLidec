@@ -46,7 +46,10 @@ public class MissionTaxiSingleton
     public void FinishMission()
     {
         stopped = true;
-        missionTime = Time.deltaTime - missionStartTime;
+        missionTime = Time.time - missionStartTime;
+        string minutes = ((int)missionTime / 60).ToString();
+        string seconds = (missionTime % 60).ToString("f2");
+        missionTime = 60 * float.Parse(minutes) + float.Parse(seconds);
     }
 
     public void DeleteInstance()

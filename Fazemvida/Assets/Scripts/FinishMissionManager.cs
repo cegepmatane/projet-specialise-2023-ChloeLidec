@@ -25,6 +25,7 @@ public class FinishMissionManager : MonoBehaviour
             stopWatch.Finish();
             checkpointUI.text = "";
             missionGBSingleton.FinishMission();
+            //get mission time in seconds
             float missionTime = missionGBSingleton.missionTime;
             int nbOfCheckpointsPassed = missionGBSingleton.nbOfCheckpointsPassed;
 
@@ -77,7 +78,7 @@ public class FinishMissionManager : MonoBehaviour
             missionTaxiSingleton.destination.SetActive(false);
             taxi.SetActive(false);
             float missionTime = missionTaxiSingleton.missionTime;
-
+            Debug.Log("missionTime = " + missionTime);
             //calculate reward
             int reward = 0;
             float timeDiff = 360 - missionTime;
