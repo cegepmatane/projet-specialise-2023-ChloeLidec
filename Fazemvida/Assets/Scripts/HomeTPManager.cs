@@ -5,23 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class HomeTPManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    public HomeSingleton home = HomeSingleton.Instance();
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && !home.GetInHome())
         {
+            home.SetInHome(true);
+            home.SetHouse(this.gameObject);
+            home.SetPlayerPos(GameObject.FindGameObjectWithTag("Player").transform.position);
             SceneManager.LoadScene("Home");
+        }
+        else
+        {
+            home.SetInHome(false);
+            SceneManager.LoadScene("Fazem");
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.transform.position = home.GetPlayerPos();
         }
     }
 }

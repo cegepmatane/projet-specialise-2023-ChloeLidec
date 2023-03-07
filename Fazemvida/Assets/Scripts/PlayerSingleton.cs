@@ -9,6 +9,7 @@ public class PlayerSingleton
     public string playerName;
     public int playerMoney;
     public Vector3 playerPosition;
+    public Vector3 house = new Vector3(0, 0, 0);
 
     private PlayerSingleton()
     {
@@ -50,4 +51,13 @@ public class PlayerSingleton
         playerPosition = position;
     }
 
+    public void SetHousePosition(Vector3 position)
+    {
+        house = position;
+    }
+
+    public Vector3 GetHousePosition()
+    {
+        return house;
+    }
 }
