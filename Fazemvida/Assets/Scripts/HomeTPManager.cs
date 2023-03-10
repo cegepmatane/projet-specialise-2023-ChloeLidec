@@ -14,6 +14,8 @@ public class HomeTPManager : MonoBehaviour
             home.SetHouse(this.gameObject);
             home.SetPlayerPos(GameObject.FindGameObjectWithTag("Player").transform.position);
             SceneManager.LoadScene("Home");
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.transform.position = new Vector3(-5.45f, -0.359f, -15.07f);
         }
         else
         {
