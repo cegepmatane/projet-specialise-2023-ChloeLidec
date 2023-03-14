@@ -68,6 +68,14 @@ public class ConnectPlayer : MonoBehaviour
             {
                 playerSingleton.SetPosition(player.GetPosition());
             }
+            if (player.GetHousePosition() == Vector3.zero)
+            {
+                playerSingleton.SetHousePosition(new Vector3(0, 0, 0));
+            }
+            else
+            {
+                playerSingleton.SetHousePosition(player.GetHousePosition());
+            }
         }
         else
         {

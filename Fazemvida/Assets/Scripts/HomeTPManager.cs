@@ -12,7 +12,6 @@ public class HomeTPManager : MonoBehaviour
     public GameObject houseUI;
     public GameObject mainUI;
     public GameObject human;
-    [SerializeField]
     public StarterAssetsInputs starterAssetsInputs;
     public void OnTriggerEnter(Collider other)
     {
@@ -44,13 +43,12 @@ public class HomeTPManager : MonoBehaviour
         MainCamera.SetActive(false);
         playerFollow.SetActive(false);
         playerCapsule.SetActive(false);
-        
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         inGameUI.SetActive(false);
         bool hasHome = player.GetHousePosition() != new Vector3(0, 0, 0);
         if (hasHome)
         {
-            if (home.IsHouseOfPlayer(this.gameObject))
+            if (home.IsHouseOfPlayer(playerCapsule.transform.position))
             {
                 houseUI.SetActive(true);
                 houseUI.transform.Find("MenuHouseBought").gameObject.SetActive(true);
@@ -106,11 +104,10 @@ public class HomeTPManager : MonoBehaviour
 
     public void TpToHome(){
             home.SetInHome(true);
-            home.SetHouse(this.gameObject);
-            home.SetPlayerPos(human.transform.Find("PlayerCapsule").gameObject.transform.position - human.transform.Find("PlayerCapsule").gameObject.transform.forward * 3);
-            SceneManager.LoadScene("Home");
             GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
-            playerCapsule.transform.position = new Vector3(-5.45f, -0.359f, -15.07f);
+            home.SetHouse(playerCapsule.transform.position);
+            home.SetPlayerPos(playerCapsule.transform.position);
+            SceneManager.LoadScene("Home");
     }
 
     public void TpToTown(){
@@ -122,11 +119,17 @@ public class HomeTPManager : MonoBehaviour
     }
 
     public void BuyHouse(){
-        Debug.Log(player.playerMoney);
-        if (player.playerMoney >= 80){
-            player.RemoveMoney(80);
-            player.SetHousePosition(human.transform.Find("PlayerCapsule").gameObject.transform.position);
-            this.CloseMenu();
+        bool hasHome = player.GetHousePosition() != new Vector3(0, 0, 0);
+        if (!hasHome && player.playerMoney >= 1000){
+            player.RemoveMoney(1000);
+            GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
+            player.SetHousePosition(playerCapsule.transform.position);
+            TpToHome();
+        }
+        else if(hasHome)
+        {
+            GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
+            player.SetHousePosition(playerCapsule.transform.position);
             TpToHome();
         }
         else
@@ -134,6 +137,7 @@ public class HomeTPManager : MonoBehaviour
             houseUI.transform.Find("MenuHouseNotBought").gameObject.transform.Find("Description").gameObject.SetActive(false);
             houseUI.transform.Find("MenuHouseNotBought").gameObject.transform.Find("NotEnoughMoney").gameObject.SetActive(true);
         }
+       
         
     }
 

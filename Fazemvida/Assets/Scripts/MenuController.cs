@@ -25,7 +25,15 @@ public class MenuController : MonoBehaviour
         //save player position and rotation
         playerPosition = human.transform.Find("PlayerCapsule").gameObject.transform.position;
         //deactive the active vehicle if there is one and hide its UI
-        vehicle = inOutVehicles.activeVehicle;
+        
+        if (inOutVehicles != null)
+        {
+            vehicle = inOutVehicles.activeVehicle;
+        }
+        else
+        {
+            vehicle = null;
+        }
         
         if (vehicle != null)
         {

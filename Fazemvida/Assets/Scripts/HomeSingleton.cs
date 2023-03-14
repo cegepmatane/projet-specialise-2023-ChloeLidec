@@ -6,9 +6,9 @@ using UnityEngine;
 public class HomeSingleton 
 {
     private static HomeSingleton instance;
-    private PlayerSingleton player;
+    private PlayerSingleton player = PlayerSingleton.Instance();
     private bool inHome;
-    private GameObject house;
+    private Vector3 housePos;
     private Vector3 playerPos;
 
     private HomeSingleton()
@@ -27,9 +27,13 @@ public class HomeSingleton
         }
     }
 
-    public bool IsHouseOfPlayer(GameObject house)
+    public bool IsHouseOfPlayer(Vector3 housePos)
     {
-        if (house.transform.position == player.GetHousePosition())
+        //cget absolute value of the difference between the player's house and the house that is being checked
+        float x = Mathf.Abs(player.GetHousePosition().x - housePos.x);
+        float y = Mathf.Abs(player.GetHousePosition().y - housePos.y);
+        float z = Mathf.Abs(player.GetHousePosition().z - housePos.z);
+        if (x < 0.8f && y < 0.5f && z < 0.8f)
         {
             return true;
         }
@@ -48,14 +52,14 @@ public class HomeSingleton
         return inHome;
     }
 
-    public void SetHouse(GameObject house)
+    public void SetHouse(Vector3 housePos)
     {
-        this.house = house;
+        this.housePos = housePos;
     }
 
-    public GameObject GetHouse()
+    public Vector3 GetHousePos()
     {
-        return house;
+        return housePos;
     }
 
     public void SetPlayerPos(Vector3 playerPos)
