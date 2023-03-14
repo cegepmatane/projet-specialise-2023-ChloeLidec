@@ -96,7 +96,7 @@ public class HomeTPManager : MonoBehaviour
         MainCamera.SetActive(true);
         playerFollow.SetActive(true);
         playerCapsule.SetActive(true);
-        playerCapsule.transform.position = playerCapsule.transform.position - playerCapsule.transform.forward * 3;
+        playerCapsule.transform.position = playerCapsule.transform.position - playerCapsule.transform.forward * 2;
         
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         inGameUI.SetActive(true);

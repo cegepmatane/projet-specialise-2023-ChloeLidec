@@ -83,23 +83,23 @@ public class ShelterManager : MonoBehaviour
         MainCamera.SetActive(true);
         playerFollow.SetActive(true);
         playerCapsule.SetActive(true);
-        playerCapsule.transform.position = playerCapsule.transform.position - playerCapsule.transform.forward * 3;
+        playerCapsule.transform.position = playerCapsule.transform.position - playerCapsule.transform.forward * 2;
         
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         inGameUI.SetActive(true);
     }
 
     public void Adopt(){
-        if (player.playerMoney >= 100)
+        if (player.playerMoney >= 100 && !player.GetAnimals().Contains(this.gameObject.name))
         {
             player.RemoveMoney(100);
             string animalName = this.gameObject.name;
             player.AddAnimal(animalName);
-            //for each player.GetAnimals
             foreach (string animal in player.GetAnimals())
             {
                 Debug.Log(animal);
             }
+            this.gameObject.SetActive(false);
         }
     }
 }

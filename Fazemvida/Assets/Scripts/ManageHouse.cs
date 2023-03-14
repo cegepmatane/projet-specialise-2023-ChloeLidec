@@ -32,11 +32,11 @@ public class ManageHouse : MonoBehaviour
             
                 if (animals.Contains(child.gameObject.name))
                 {
-                    child.gameObject.SetActive(false);
+                    child.gameObject.SetActive(true);
                 }
                 else
                 {
-                    child.gameObject.SetActive(true);
+                    child.gameObject.SetActive(false);
                 }
             
         }

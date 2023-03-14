@@ -71,4 +71,9 @@ public class PlayerSingleton
     {
         animals.Add(animal);
     }
+
+    public void SetAnimals(List<string> animals)
+    {
+        this.animals = animals;
+    }
 }
