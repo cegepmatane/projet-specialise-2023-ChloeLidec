@@ -58,7 +58,7 @@ public class ConnectPlayer : MonoBehaviour
             //get the money from the json file
             Player player = JsonUtility.FromJson<Player>(jsonFile);
             int money = player.GetMoney();
-            playerSingleton.SetMoney(money);
+            playerSingleton.SetMoney(500);
             //if the player has no position, set it to the default position
             if (player.GetPosition() == Vector3.zero)
             {

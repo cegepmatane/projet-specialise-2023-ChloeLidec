@@ -7,6 +7,7 @@ TagManager:
   - CinemachineTarget
   - Vehicle
   - Boat
+  - Animal
   layers:
   - Default
   - TransparentFX

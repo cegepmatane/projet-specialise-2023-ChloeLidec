@@ -10,6 +10,7 @@ public class PlayerSingleton
     public int playerMoney;
     public Vector3 playerPosition;
     public Vector3 house;
+    public List<string> animals = new List<string>();
 
     private PlayerSingleton()
     {
@@ -59,5 +60,15 @@ public class PlayerSingleton
     public Vector3 GetHousePosition()
     {
         return house;
+    }
+
+    public List<string> GetAnimals()
+    {
+        return animals;
+    }
+
+    public void AddAnimal(string animal)
+    {
+        animals.Add(animal);
     }
 }

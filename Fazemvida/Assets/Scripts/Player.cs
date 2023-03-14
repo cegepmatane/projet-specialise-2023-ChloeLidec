@@ -10,7 +10,7 @@ public class Player
     public int playerMoney;
     public Vector3 playerPosition;
     public Vector3 house;
-
+    public List<string> animals;
     
     public Player(string name, int money)
     {
@@ -36,5 +36,10 @@ public class Player
     public Vector3 GetHousePosition()
     {
         return house;
+    }
+
+    public List<string> GetAnimals()
+    {
+        return animals;
     }
 }

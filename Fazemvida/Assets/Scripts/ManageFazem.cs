@@ -42,6 +42,7 @@ public class ManageFazem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        textCA.GetComponent<UnityEngine.UI.Text>().text = playerSingleton.playerMoney.ToString();
         
     }
 
