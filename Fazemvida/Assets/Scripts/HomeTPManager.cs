@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using StarterAssets;
 
 public class HomeTPManager : MonoBehaviour
 {
@@ -10,16 +12,23 @@ public class HomeTPManager : MonoBehaviour
     public GameObject houseUI;
     public GameObject mainUI;
     public GameObject human;
+    [SerializeField]
+    public StarterAssetsInputs starterAssetsInputs;
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player" && !home.GetInHome())
         {
             ShowMenu();
         }
+        else if (other.gameObject.tag == "Player" && home.GetInHome())
+        {
+            TpToTown();
+        }
     }
 
     public void ShowMenu()
     {
+        starterAssetsInputs.StopInput();
         GameObject move = mainUI.transform.Find("UI_Virtual_Joystick_Move").gameObject;
         GameObject look = mainUI.transform.Find("UI_Virtual_Joystick_Look").gameObject;
         GameObject sprint = mainUI.transform.Find("UI_Virtual_Button_Sprint").gameObject;
@@ -67,6 +76,7 @@ public class HomeTPManager : MonoBehaviour
 
     public void CloseMenu()
     {
+        starterAssetsInputs.StopInput();
         houseUI.transform.Find("MenuHouseNotBought").gameObject.transform.Find("Description").gameObject.SetActive(true);
         houseUI.transform.Find("MenuHouseNotBought").gameObject.transform.Find("NotEnoughMoney").gameObject.SetActive(false);
         houseUI.SetActive(false);
@@ -88,35 +98,35 @@ public class HomeTPManager : MonoBehaviour
         MainCamera.SetActive(true);
         playerFollow.SetActive(true);
         playerCapsule.SetActive(true);
-        //move player 2 units behind where he was
-        playerCapsule.transform.position = new Vector3(playerCapsule.transform.position.x, playerCapsule.transform.position.y, playerCapsule.transform.position.z - 2);
+        playerCapsule.transform.position = playerCapsule.transform.position - playerCapsule.transform.forward * 3;
         
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         inGameUI.SetActive(true);
     }
 
     public void TpToHome(){
-        if (!home.GetInHome()){
             home.SetInHome(true);
             home.SetHouse(this.gameObject);
-            home.SetPlayerPos(GameObject.FindGameObjectWithTag("Player").transform.position);
+            home.SetPlayerPos(human.transform.Find("PlayerCapsule").gameObject.transform.position - human.transform.Find("PlayerCapsule").gameObject.transform.forward * 3);
             SceneManager.LoadScene("Home");
-            GameObject playerCapsule = GameObject.FindGameObjectWithTag("Player");
+            GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
             playerCapsule.transform.position = new Vector3(-5.45f, -0.359f, -15.07f);
-        }
-        else
-        {
-            home.SetInHome(false);
-            SceneManager.LoadScene("Fazem");
-            GameObject playerCapsule = GameObject.FindGameObjectWithTag("Player");
-            playerCapsule.transform.position = home.GetPlayerPos();
-        }
+    }
+
+    public void TpToTown(){
+        home.SetInHome(false);
+        SceneManager.LoadScene("Fazem");
+        GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
+        playerCapsule.transform.position = home.GetPlayerPos();
+        starterAssetsInputs.StopInput();
     }
 
     public void BuyHouse(){
-        if (player.playerMoney >= 1000){
-            player.RemoveMoney(1000);
-            player.SetHousePosition(GameObject.FindGameObjectWithTag("Player").transform.position);
+        Debug.Log(player.playerMoney);
+        if (player.playerMoney >= 80){
+            player.RemoveMoney(80);
+            player.SetHousePosition(human.transform.Find("PlayerCapsule").gameObject.transform.position);
+            this.CloseMenu();
             TpToHome();
         }
         else
