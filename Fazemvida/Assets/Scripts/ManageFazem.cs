@@ -32,6 +32,8 @@ public class ManageFazem : MonoBehaviour
 
     [Header("Houses")]
     public GameObject housesHaloContainer;
+    public Material buildingsToBuyHalo;
+    public Material buildingsHalo;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,16 +43,30 @@ public class ManageFazem : MonoBehaviour
         GameObject capsule = human.transform.Find("PlayerCapsule").gameObject;
         capsule.transform.position = new Vector3(playerSingleton.playerPosition[0], playerSingleton.playerPosition[1], playerSingleton.playerPosition[2]);
 
-        foreach (Transform child in housesContainer.transform)
+        foreach (Transform child in housesHaloContainer.transform)
         {
-            if (playerSingleton.GetHouses().Contains(child.gameObject.name))
-            {
-                child.gameObject.SetActive(true);
+            if (playerSingleton.GetHouseName() == child.gameObject.name){
+                MeshRenderer meshRenderer = child.gameObject.GetComponent<MeshRenderer>();
+                meshRenderer.material = buildingsToBuyHalo;
             }
             else
             {
-                child.gameObject.SetActive(false);
+                MeshRenderer meshRenderer = child.gameObject.GetComponent<MeshRenderer>();
+                meshRenderer.material = buildingsHalo;
             }
+        }
+        if (playerSingleton.leftHouse){
+        GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
+        string houseName = playerSingleton.GetHouseName();
+        foreach (Transform child in housesHaloContainer.transform)
+        {
+            if (child.name == houseName)
+            {
+                playerCapsule.transform.position = child.transform.position;
+                playerCapsule.transform.position = new Vector3(playerCapsule.transform.position.x, 60, playerCapsule.transform.position.z + 2);
+            }
+        }
+        playerSingleton.leftHouse = false;
         }
     }
 

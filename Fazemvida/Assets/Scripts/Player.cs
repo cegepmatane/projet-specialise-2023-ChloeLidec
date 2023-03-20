@@ -9,8 +9,9 @@ public class Player
     [SerializeField]
     public int playerMoney;
     public Vector3 playerPosition;
-    public Vector3 house;
+    public string house;
     public List<string> animals;
+    public bool leftHouse;
     
     public Player(string name, int money)
     {
@@ -33,11 +34,10 @@ public class Player
         return playerPosition;
     }
 
-    public Vector3 GetHousePosition()
+    public string GetHouse()
     {
         return house;
     }
-
     public List<string> GetAnimals()
     {
         return animals;

@@ -9,8 +9,9 @@ public class PlayerSingleton
     public string playerName;
     public int playerMoney;
     public Vector3 playerPosition;
-    public Vector3 house;
+    public string house;
     public List<string> animals = new List<string>();
+    public bool leftHouse = false;
 
     private PlayerSingleton()
     {
@@ -52,12 +53,12 @@ public class PlayerSingleton
         playerPosition = position;
     }
 
-    public void SetHousePosition(Vector3 position)
+    public void SetHouseName(string houseName)
     {
-        house = position;
+        house = houseName;
     }
 
-    public Vector3 GetHousePosition()
+    public string GetHouseName()
     {
         return house;
     }

@@ -4109,6 +4109,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1001 &87532840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5927,6 +5928,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1001 &142389718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8833,6 +8835,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1001 &235273856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14664,6 +14667,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1 &416864041
 GameObject:
   m_ObjectHideFlags: 0
@@ -14779,6 +14783,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1001 &416955218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17380,6 +17385,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1001 &489110502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19098,6 +19104,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1001 &565678422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23033,6 +23040,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1 &678044750
 GameObject:
   m_ObjectHideFlags: 0
@@ -23563,6 +23571,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1 &690872197 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7094977340588366727, guid: 035bf1ba97d19214580cfe6f5a29fdc3,
@@ -25752,6 +25761,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1001 &773908624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32706,6 +32716,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1 &959376410
 GameObject:
   m_ObjectHideFlags: 0
@@ -37676,6 +37687,9 @@ MonoBehaviour:
   - {fileID: 343495285}
   - {fileID: 2139033757}
   - {fileID: 625857570}
+  housesHaloContainer: {fileID: 819238620}
+  buildingsToBuyHalo: {fileID: 2100000, guid: aa576d919108d4548b05a468850fc664, type: 2}
+  buildingsHalo: {fileID: 2100000, guid: c3e2b078431c33d4fa8bf09ee408f6df, type: 2}
 --- !u!114 &1111849474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37843,6 +37857,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 819238620}
 --- !u!1 &1113691708
 GameObject:
   m_ObjectHideFlags: 0
@@ -38875,6 +38890,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1001 &1128371598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40665,6 +40681,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1001 &1194814678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43178,6 +43195,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1001 &1273618974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53658,6 +53676,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1001 &1551923411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59465,6 +59484,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1001 &1685264424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60063,6 +60083,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1 &1699596675
 GameObject:
   m_ObjectHideFlags: 0
@@ -67348,6 +67369,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1 &1923041861
 GameObject:
   m_ObjectHideFlags: 0
@@ -72454,6 +72476,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1 &2138008488
 GameObject:
   m_ObjectHideFlags: 0
@@ -72569,6 +72592,7 @@ MonoBehaviour:
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
+  housesCollider: {fileID: 0}
 --- !u!1 &2138803578
 GameObject:
   m_ObjectHideFlags: 0

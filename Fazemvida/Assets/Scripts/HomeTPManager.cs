@@ -13,11 +13,12 @@ public class HomeTPManager : MonoBehaviour
     public GameObject mainUI;
     public GameObject human;
     public StarterAssetsInputs starterAssetsInputs;
+    public GameObject housesCollider;
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player" && !home.GetInHome())
         {
-            ShowMenu();
+            ShowMenu(this.gameObject);
         }
         else if (other.gameObject.tag == "Player" && home.GetInHome())
         {
@@ -25,7 +26,7 @@ public class HomeTPManager : MonoBehaviour
         }
     }
 
-    public void ShowMenu()
+    public void ShowMenu(GameObject houseCollider)
     {
         starterAssetsInputs.StopInput();
         GameObject move = mainUI.transform.Find("UI_Virtual_Joystick_Move").gameObject;
@@ -45,10 +46,11 @@ public class HomeTPManager : MonoBehaviour
         playerCapsule.SetActive(false);
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         inGameUI.SetActive(false);
-        bool hasHome = player.GetHousePosition() != new Vector3(0, 0, 0);
+        bool hasHome = player.GetHouseName() != "" && player.GetHouseName() != null;
+        home.tempHouse = houseCollider.name;
         if (hasHome)
         {
-            if (home.IsHouseOfPlayer(playerCapsule.transform.position))
+            if (home.IsHouseOfPlayer(home.tempHouse))
             {
                 houseUI.SetActive(true);
                 houseUI.transform.Find("MenuHouseBought").gameObject.SetActive(true);
@@ -97,39 +99,36 @@ public class HomeTPManager : MonoBehaviour
         playerFollow.SetActive(true);
         playerCapsule.SetActive(true);
         playerCapsule.transform.position = playerCapsule.transform.position - playerCapsule.transform.forward * 2;
-        
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         inGameUI.SetActive(true);
     }
 
     public void TpToHome(){
-            home.SetInHome(true);
-            GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
-            home.SetHouse(playerCapsule.transform.position);
-            home.SetPlayerPos(playerCapsule.transform.position);
-            SceneManager.LoadScene("Home");
+        home.SetInHome(true);
+        SceneManager.LoadScene("Home");
     }
 
     public void TpToTown(){
         home.SetInHome(false);
         SceneManager.LoadScene("Fazem");
-        GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
-        playerCapsule.transform.position = home.GetPlayerPos();
         starterAssetsInputs.StopInput();
+        player.leftHouse = true;
     }
 
     public void BuyHouse(){
-        bool hasHome = player.GetHousePosition() != new Vector3(0, 0, 0);
-        if (!hasHome && player.playerMoney >= 1000){
-            player.RemoveMoney(1000);
+        bool hasHome = player.GetHouseName() != "" && player.GetHouseName() != null;
+        if (!hasHome && player.playerMoney >= 100){
+            player.RemoveMoney(100);
             GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
-            player.SetHousePosition(playerCapsule.transform.position);
+            player.SetHouseName(home.tempHouse);
+            home.SetHouse(home.tempHouse);
             TpToHome();
         }
         else if(hasHome)
         {
             GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
-            player.SetHousePosition(playerCapsule.transform.position);
+            player.SetHouseName(home.tempHouse);
+            home.SetHouse(home.tempHouse);
             TpToHome();
         }
         else
