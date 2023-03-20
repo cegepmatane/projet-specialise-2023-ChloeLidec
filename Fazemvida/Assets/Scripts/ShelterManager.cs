@@ -41,11 +41,18 @@ public class ShelterManager : MonoBehaviour
         inGameUI.SetActive(false);
         shelterUI.SetActive(true);
         List<string> animals = player.GetAnimals();
+        //get just the animal types ie. "cat", "dog", "bird" by spliting the string
+        List<string> animalTypes = new List<string>();
+        foreach (string animal in animals)
+        {
+            string[] animalSplit = animal.Split(' ');
+            animalTypes.Add(animalSplit[0]);
+        }
         foreach (Transform child in shelterUI.transform)
         {
             if (child.gameObject.tag == "Animal")
             {
-                if (animals.Contains(child.gameObject.name))
+                if (animalTypes.Contains(child.gameObject.name))
                 {
                     child.gameObject.SetActive(false);
                 }
@@ -90,15 +97,21 @@ public class ShelterManager : MonoBehaviour
     }
 
     public void Adopt(){
-        if (player.playerMoney >= 100 && !player.GetAnimals().Contains(this.gameObject.name))
+        List<string> animals = player.GetAnimals();
+        //get just the animal types ie. "cat", "dog", "bird" by spliting the string
+        List<string> animalTypes = new List<string>();
+        List<string> animalNames = new List<string>();
+        foreach (string animal in animals)
+        {
+            string[] animalSplit = animal.Split(' ');
+            animalTypes.Add(animalSplit[0]);
+            animalNames.Add(animalSplit[1]);
+        }
+        if (player.playerMoney >= 100 && !animalTypes.Contains(this.gameObject.name))
         {
             player.RemoveMoney(100);
             string animalName = this.gameObject.name;
             player.AddAnimal(animalName);
-            foreach (string animal in player.GetAnimals())
-            {
-                Debug.Log(animal);
-            }
             this.gameObject.SetActive(false);
         }
     }

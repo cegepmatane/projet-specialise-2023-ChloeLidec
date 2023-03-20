@@ -29,6 +29,9 @@ public class ManageFazem : MonoBehaviour
     [Header("MissionTaxi")]
     public GameObject taxi;
     public GameObject[] possibleDestinations;
+
+    [Header("Houses")]
+    public GameObject housesHaloContainer;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +40,18 @@ public class ManageFazem : MonoBehaviour
         textCA.GetComponent<UnityEngine.UI.Text>().text = playerSingleton.playerMoney.ToString();
         GameObject capsule = human.transform.Find("PlayerCapsule").gameObject;
         capsule.transform.position = new Vector3(playerSingleton.playerPosition[0], playerSingleton.playerPosition[1], playerSingleton.playerPosition[2]);
+
+        foreach (Transform child in housesContainer.transform)
+        {
+            if (playerSingleton.GetHouses().Contains(child.gameObject.name))
+            {
+                child.gameObject.SetActive(true);
+            }
+            else
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
     }
 
     // Update is called once per frame

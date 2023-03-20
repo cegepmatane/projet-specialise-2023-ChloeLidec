@@ -69,11 +69,24 @@ public class PlayerSingleton
 
     public void AddAnimal(string animal)
     {
-        animals.Add(animal);
+        animals.Add(animal + " " + animal);
     }
 
     public void SetAnimals(List<string> animals)
     {
         this.animals = animals;
+    }
+
+    public void RenameAnimal(string animal, string newName)
+    {
+        List<string> animals = GetAnimals();
+        List<string> animalTypes = new List<string>();
+        foreach (string a in animals)
+        {
+            string[] animalSplit = a.Split(' ');
+            animalTypes.Add(animalSplit[0]);
+        }
+        int index = animalTypes.IndexOf(animal);
+        animals[index] = animal + " " + newName;
     }
 }
