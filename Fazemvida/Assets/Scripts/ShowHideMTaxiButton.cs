@@ -9,6 +9,7 @@ public class ShowHideMTaxiButton : MonoBehaviour
         [Header("Objects")]
         public GameObject staringMissionPole;
         public GameObject player;
+        public GameObject taxi;
         [SerializeField]
         private GameObject menuUI;
         [SerializeField]
@@ -33,14 +34,17 @@ public class ShowHideMTaxiButton : MonoBehaviour
             }
         }
 
-        //check if the player is close to the pole
         public bool IsPlayerCloseToPole(){
-            GameObject playerCapsule = player.transform.Find("PlayerCapsule").gameObject;
-            if (Vector3.Distance(staringMissionPole.transform.position, playerCapsule.transform.position) < 2){
-                    //return true
+            if (taxi.activeSelf){
+                if (Vector3.Distance(staringMissionPole.transform.position, taxi.transform.position) < 4){
                     return true;
                 }
-            //return false
+            }
+            else{
+            GameObject playerCapsule = player.transform.Find("PlayerCapsule").gameObject;
+            if (Vector3.Distance(staringMissionPole.transform.position, playerCapsule.transform.position) < 2){
+                    return true;
+                }}
             return false;
         }
 }

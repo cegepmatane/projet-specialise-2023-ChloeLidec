@@ -121,9 +121,9 @@ public class ManageFazem : MonoBehaviour
         sprint.SetActive(false);
         jump.SetActive(false);
         GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
-        GameObject MainCamera = human.transform.Find("MainCamera").gameObject;
+        GameObject mainCamera = human.transform.Find("MainCamera").gameObject;
         GameObject playerFollow = human.transform.Find("PlayerFollowCamera").gameObject;
-        MainCamera.SetActive(false);
+        mainCamera.SetActive(false);
         playerFollow.SetActive(false);
         playerCapsule.SetActive(false);
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
@@ -134,7 +134,8 @@ public class ManageFazem : MonoBehaviour
         PrometeoCarController  prometeoCarController = taxi.GetComponent<PrometeoCarController>();
         prometeoCarController.enabled = true;
         taxi.transform.Find("Vehicle Camera").gameObject.GetComponent<Camera>().enabled = true;
-        taxi.transform.position = new Vector3(playerSingleton.playerPosition[0] + 10, playerSingleton.playerPosition[1], playerSingleton.playerPosition[2]);
+        taxi.transform.position = new Vector3(482.20f, 60.10f, -104.10f);
+        taxi.transform.rotation = Quaternion.Euler(0, 0, 0);
         missionTaxiSingleton.SetMissionStartTime();
         stopWatch.StartSW();
         

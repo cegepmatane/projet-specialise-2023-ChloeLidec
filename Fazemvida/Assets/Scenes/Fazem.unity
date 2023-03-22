@@ -4105,11 +4105,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1001 &87532840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5924,11 +5925,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1001 &142389718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8831,11 +8833,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1001 &235273856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14663,11 +14666,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1 &416864041
 GameObject:
   m_ObjectHideFlags: 0
@@ -14779,11 +14783,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1001 &416955218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17381,11 +17386,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1001 &489110502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19100,11 +19106,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1001 &565678422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23036,11 +23043,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1 &678044750
 GameObject:
   m_ObjectHideFlags: 0
@@ -23567,11 +23575,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1 &690872197 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7094977340588366727, guid: 035bf1ba97d19214580cfe6f5a29fdc3,
@@ -25757,11 +25766,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1001 &773908624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32712,11 +32722,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1 &959376410
 GameObject:
   m_ObjectHideFlags: 0
@@ -37838,6 +37849,7 @@ MonoBehaviour:
   missionButton: {fileID: 632910063}
   staringMissionPole: {fileID: 9770540}
   player: {fileID: 690872197}
+  taxi: {fileID: 400071893}
   menuUI: {fileID: 1213641173}
   menuMissionUI: {fileID: 287217118}
   mainScript: {fileID: 1111849473}
@@ -37853,6 +37865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
@@ -38886,11 +38899,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1001 &1128371598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40677,11 +40691,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1001 &1194814678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43191,11 +43206,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1001 &1273618974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53672,11 +53688,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1001 &1551923411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59480,11 +59497,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1001 &1685264424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60079,11 +60097,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1 &1699596675
 GameObject:
   m_ObjectHideFlags: 0
@@ -67365,11 +67384,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1 &1923041861
 GameObject:
   m_ObjectHideFlags: 0
@@ -72472,11 +72492,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1 &2138008488
 GameObject:
   m_ObjectHideFlags: 0
@@ -72588,11 +72609,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd24eafbb88d7e4cb60d279c6c431fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScript: {fileID: 1111849473}
   houseUI: {fileID: 1398477070}
   mainUI: {fileID: 797991153}
   human: {fileID: 690872197}
   starterAssetsInputs: {fileID: 797991156}
-  housesCollider: {fileID: 0}
+  housesCollider: {fileID: 819238620}
 --- !u!1 &2138803578
 GameObject:
   m_ObjectHideFlags: 0

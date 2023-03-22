@@ -9,6 +9,7 @@ public class HomeTPManager : MonoBehaviour
 {
     public HomeSingleton home = HomeSingleton.Instance();
     public PlayerSingleton player = PlayerSingleton.Instance();
+    public ManageFazem mainScript;
     public GameObject houseUI;
     public GameObject mainUI;
     public GameObject human;
@@ -16,7 +17,7 @@ public class HomeTPManager : MonoBehaviour
     public GameObject housesCollider;
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" && !home.GetInHome())
+        if (other.gameObject.tag == "Player" && !home.GetInHome() && mainScript.missionStarted()=="none")
         {
             ShowMenu(this.gameObject);
         }
@@ -117,8 +118,8 @@ public class HomeTPManager : MonoBehaviour
 
     public void BuyHouse(){
         bool hasHome = player.GetHouseName() != "" && player.GetHouseName() != null;
-        if (!hasHome && player.playerMoney >= 100){
-            player.RemoveMoney(100);
+        if (!hasHome && player.playerMoney >= 1000){
+            player.RemoveMoney(1000);
             GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
             player.SetHouseName(home.tempHouse);
             home.SetHouse(home.tempHouse);
