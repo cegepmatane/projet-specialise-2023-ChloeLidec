@@ -790,7 +790,11 @@ public class PrometeoCarController : MonoBehaviour
       isTractionLocked = true;
       isDrifting = false;
       carSpeed = 0f;
-      
+      carRigidbody.velocity = Vector3.zero;
+      frontLeftCollider.motorTorque = 0;
+      frontRightCollider.motorTorque = 0;
+      rearLeftCollider.motorTorque = 0;
+      rearRightCollider.motorTorque = 0;
     }
 
 }

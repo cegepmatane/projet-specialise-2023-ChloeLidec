@@ -29,6 +29,7 @@ public class InOutVehicles : MonoBehaviour
 
     private void ExitVehicle()
     {
+        
         mainUI.transform.Find("VehicleUI").gameObject.SetActive(false);
         human.transform.Find("MainCamera").gameObject.SetActive(true);
         human.transform.Find("PlayerFollowCamera").gameObject.SetActive(true);
@@ -39,18 +40,14 @@ public class InOutVehicles : MonoBehaviour
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         GameObject inGameUI2 = inGameUI.transform.Find("MenuBtn").gameObject;
         inGameUI2.SetActive(true);
-
-        
-        
-        activeVehicle.GetComponent<PrometeoCarController>().StopCar();
-        
-        GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
-        playerCapsule.SetActive(true);
-        playerCapsule.transform.position = activeVehicle.transform.position + activeVehicle.transform.forward * 2;
-        
+        activeVehicle.GetComponent<PrometeoCarController>().StopCar();       
         activeVehicle.transform.Find("Vehicle Camera").gameObject.GetComponent<Camera>().enabled = false;
         activeVehicle.GetComponent<PrometeoCarController>().enabled = false;
         prometeoCarController = null;
+        GameObject vehicleBody = activeVehicle.transform.Find("Body").gameObject;
+        GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
+        playerCapsule.SetActive(true);
+        playerCapsule.transform.position = vehicleBody.transform.position + new Vector3(2, 0, 0);
         activeVehicle = null;
     }
 
