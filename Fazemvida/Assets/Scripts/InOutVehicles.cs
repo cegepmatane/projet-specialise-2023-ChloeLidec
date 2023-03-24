@@ -46,7 +46,7 @@ public class InOutVehicles : MonoBehaviour
         
         GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
         playerCapsule.SetActive(true);
-        playerCapsule.transform.position = activeVehicle.transform.position + activeVehicle.transform.TransformDirection(Vector3.left * 2);
+        playerCapsule.transform.position = activeVehicle.transform.position + activeVehicle.transform.forward * 2;
         
         activeVehicle.transform.Find("Vehicle Camera").gameObject.GetComponent<Camera>().enabled = false;
         activeVehicle.GetComponent<PrometeoCarController>().enabled = false;

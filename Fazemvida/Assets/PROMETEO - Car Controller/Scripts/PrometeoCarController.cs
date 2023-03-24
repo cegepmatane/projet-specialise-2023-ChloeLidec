@@ -789,13 +789,8 @@ public class PrometeoCarController : MonoBehaviour
       //stop steering and drifting
       isTractionLocked = true;
       isDrifting = false;
-      //stop the car
-      while (carSpeed > 0f){
-        carSpeed = carSpeed - (Time.deltaTime * 10f);
-        if(carSpeed < 0f){
-          carSpeed = 0f;
-        }
-      }
+      carSpeed = 0f;
+      
     }
 
 }
