@@ -8,13 +8,20 @@ public class FinishMissionManager : MonoBehaviour
 
     public MissionGBSingleton missionGBSingleton = MissionGBSingleton.Instance();
     public MissionTaxiSingleton missionTaxiSingleton = MissionTaxiSingleton.Instance();
+    public MissionFarmSingleton missionFarmSingleton = MissionFarmSingleton.Instance();
+    [Header("MissionGB")]
     public Text checkpointUI;
+    [Header("MissionTaxi")]
+    public GameObject taxi = null;
+    private Vector3 taxiPosition = new Vector3(0, 0, 0);
+    [Header("MissionFarm")]
+    public GameObject farmerHalo = null;
+    public GameObject finishHarvestHalo = null;
+    [Header("General")]
     public StopWatch stopWatch;
     public PlayerSingleton playerSingleton = PlayerSingleton.Instance();
     public GameObject human = null;
     public GameObject mainUI = null;
-    public GameObject taxi = null;
-    private Vector3 taxiPosition = new Vector3(0, 0, 0);
     [Header("Coin UI")]
     public GameObject coinUI;
     public void OnTriggerEnter(Collider other)
@@ -110,8 +117,50 @@ public class FinishMissionManager : MonoBehaviour
             string recap = "Bravo! Vous avez terminé la mission en " + missionTime + " secondes. Vous avez gagné " + reward + " pièces!";
             menuUI.transform.Find("Recap").GetComponent<Text>().text = recap;
             menuUI.SetActive(true);
+        }
+        else if (other.gameObject.tag == "Player" && !missionFarmSingleton.stopped)
+        {
+            stopWatch.Finish();
+            missionFarmSingleton.FinishMission();
+            float missionTime = missionTaxiSingleton.missionTime;
+            //calculate reward
+            int reward = 0;
+            float timeDiff = 700 - missionTime;
+            if (timeDiff > 0)
+            {
+                reward += (int)(timeDiff);
+            }
+            playerSingleton.AddMoney(reward);
+            int corn = missionFarmSingleton.corn - 50;
+            playerSingleton.AddCorn(corn);
 
-    }
+            farmerHalo.SetActive(true);
+            finishHarvestHalo.SetActive(false);
+
+            //manage UI
+            GameObject move = mainUI.transform.Find("UI_Virtual_Joystick_Move").gameObject;
+            GameObject look = mainUI.transform.Find("UI_Virtual_Joystick_Look").gameObject;
+            GameObject sprint = mainUI.transform.Find("UI_Virtual_Button_Sprint").gameObject;
+            GameObject jump = mainUI.transform.Find("UI_Virtual_Button_Jump").gameObject;
+            move.SetActive(false);
+            look.SetActive(false);
+            sprint.SetActive(false);
+            jump.SetActive(false);
+            GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
+            GameObject MainCamera = human.transform.Find("MainCamera").gameObject;
+            GameObject playerFollow = human.transform.Find("PlayerFollowCamera").gameObject;
+            MainCamera.SetActive(false);
+            playerFollow.SetActive(false);
+            playerCapsule.SetActive(false);
+            GameObject FMissionUI = mainUI.transform.Find("FarmMissionUI").gameObject;
+            FMissionUI.SetActive(false);
+            GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
+            inGameUI.SetActive(false);
+            GameObject menuUI = mainUI.transform.Find("EndMFUI").gameObject;
+            string recap = "Bravo! Vous avez terminé la mission en " + missionTime + " secondes. Vous avez gagné " + reward + " pièces!";
+            menuUI.transform.Find("Recap").GetComponent<Text>().text = recap;
+            menuUI.SetActive(true);
+        }
     }
     public void HideMenu(){
         GameObject move = mainUI.transform.Find("UI_Virtual_Joystick_Move").gameObject;
@@ -137,6 +186,7 @@ public class FinishMissionManager : MonoBehaviour
         textCA.GetComponent<UnityEngine.UI.Text>().text = playerSingleton.playerMoney.ToString();
         mainUI.transform.Find("EndMTUI").gameObject.SetActive(false);
         mainUI.transform.Find("EndMGBUI").gameObject.SetActive(false);
+        mainUI.transform.Find("EndMFUI").gameObject.SetActive(false);
         mainUI.transform.Find("VehicleUI").gameObject.SetActive(false);
 }
 }

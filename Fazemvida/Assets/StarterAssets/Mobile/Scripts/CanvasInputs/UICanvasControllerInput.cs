@@ -11,6 +11,7 @@ namespace StarterAssets
         public MenuController menuController;
         public MenuMissionGBController menuMissionGBController;
         public MenuMissionTController menuMissionTController;
+        public MenuMissionFController menuMissionFController;
         public PrometeoCarController prometeoCarController;
         public void VirtualMoveInput(Vector2 virtualMoveDirection)
         {
@@ -66,6 +67,12 @@ namespace StarterAssets
         {
             starterAssetsInputs.StopInput();
             menuMissionTController.StartMission();
+        }
+
+        public void VirtualStartMissionFarmInput()
+        {
+            starterAssetsInputs.StopInput();
+            menuMissionFController.StartMission();
         }
     }
 

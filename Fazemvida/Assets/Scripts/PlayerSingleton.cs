@@ -12,6 +12,7 @@ public class PlayerSingleton
     public string house;
     public List<string> animals = new List<string>();
     public bool leftHouse = false;
+    public int corn = 0;
 
     private PlayerSingleton()
     {
@@ -89,5 +90,21 @@ public class PlayerSingleton
         }
         int index = animalTypes.IndexOf(animal);
         animals[index] = animal + " " + newName;
+    }
+    public int GetCorn()
+    {
+        return corn;
+    }
+    public void SetCorn(int amount)
+    {
+        corn = amount;
+    }
+    public void AddCorn(int amount)
+    {
+        corn += amount;
+    }
+    public void RemoveCorn(int amount)
+    {
+        corn -= amount;
     }
 }

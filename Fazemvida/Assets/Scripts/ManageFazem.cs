@@ -9,7 +9,7 @@ public class ManageFazem : MonoBehaviour
     PlayerSingleton playerSingleton;
     MissionGBSingleton missionGBSingleton;
     MissionTaxiSingleton missionTaxiSingleton;
-
+    MissionFarmSingleton missionFarmSingleton;
     
     [Header("Human")]
     public GameObject human;
@@ -30,6 +30,10 @@ public class ManageFazem : MonoBehaviour
     public GameObject taxi;
     public GameObject[] possibleDestinations;
 
+    [Header("MissionFarm")]
+    public GameObject farmerHalo;
+    public GameObject finishHarvestHalo;
+    public GameObject cropsContainer;
     [Header("Houses")]
     public GameObject housesHaloContainer;
     public Material buildingsToBuyHalo;
@@ -136,7 +140,21 @@ public class ManageFazem : MonoBehaviour
         taxi.transform.rotation = Quaternion.Euler(0, 0, 0);
         missionTaxiSingleton.SetMissionStartTime();
         stopWatch.StartSW();
-        
+    }
+
+    public void StartMissionFarm(){
+        foreach (Transform child in cropsContainer.transform)
+        {
+            child.gameObject.SetActive(true);
+        }
+        GameObject missionUI = mainUI.transform.Find("FarmMissionUI").gameObject;
+        missionUI.SetActive(true);
+        farmerHalo.SetActive(false);
+        finishHarvestHalo.SetActive(false);
+        missionFarmSingleton = MissionFarmSingleton.Instance();
+        missionFarmSingleton.ResetMission();
+        missionFarmSingleton.SetMissionStartTime();
+        stopWatch.StartSW();
     }
 
 }

@@ -5,24 +5,22 @@ public class HoeMovement : MonoBehaviour
 {
     [SerializeField]
     public GameObject handle;
-    public GameObject slider;
-    private float sliderValue = 0;
-    private int rotation = 1;
+    public Slider slider;
+    private float startTime;
+    private float duration;
 
     public void Update()
     {
-        if (sliderValue != slider.GetComponent<Slider>().value)
-        {
-            sliderValue = slider.GetComponent<Slider>().value;
-            Hoe();
-        }
-        
+        float progress = (Time.time - startTime) / duration;
+        slider.value = progress;
+        handle.transform.Rotate(0, 0, (Time.time % 1 < 0.5 ? 1 : -1) * Time.deltaTime * 80);
     }
 
-    public void Hoe()
+    public void Hoe(float time)
     {
-        rotation = rotation * -1;
-        handle.transform.Rotate(0, 0, rotation * 40);
+        startTime = Time.time;
+        duration = time;
+
     }
 
 }

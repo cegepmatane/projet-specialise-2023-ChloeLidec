@@ -8,6 +8,7 @@ TagManager:
   - Vehicle
   - Boat
   - Animal
+  - Corn
   layers:
   - Default
   - TransparentFX
