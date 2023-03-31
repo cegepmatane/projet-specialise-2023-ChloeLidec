@@ -75,6 +75,7 @@ public class FinishMissionManager : MonoBehaviour
             stopWatch.Finish();
             missionTaxiSingleton.FinishMission();
             missionTaxiSingleton.destination.SetActive(false);
+            missionTaxiSingleton.destination = null;
             taxiPosition = taxi.transform.position;
             taxi.SetActive(false);
             float missionTime = missionTaxiSingleton.missionTime;

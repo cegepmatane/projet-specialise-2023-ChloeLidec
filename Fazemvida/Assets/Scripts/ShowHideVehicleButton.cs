@@ -26,7 +26,7 @@ public class ShowHideVehicleButton : MonoBehaviour
         
         public void Update(){
             //if the player is close to a vehicle
-            if (IsPlayerCloseToVehicle() && !menuUI.activeSelf){
+            if (IsPlayerCloseToVehicle() && !menuUI.activeSelf && !(inOutVehicles.activeVehicle.tag == "Boat")){
                 //show the button
                 vehicleButton.SetActive(true);
             }

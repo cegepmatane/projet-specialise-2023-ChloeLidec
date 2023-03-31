@@ -19,6 +19,7 @@ public class StopWatch : MonoBehaviour
         textTime.gameObject.SetActive(true);
         textTime.text = "0:00.00";
         startTime = Time.time;
+        finished = false;
     }
 
     // Update is called once per frame

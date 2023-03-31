@@ -40,8 +40,8 @@ namespace StarterAssets
         public void VirtualShowMenuInput()
         {
             starterAssetsInputs.StopInput();
-            if (prometeoCarController != null){
-                prometeoCarController.StopCar();
+            if (inOutVehicles.activeVehicle != null){
+                inOutVehicles.activeVehicle.GetComponent<PrometeoCarController>().StopCar();
             }
             menuController.ShowMenu();
         }
