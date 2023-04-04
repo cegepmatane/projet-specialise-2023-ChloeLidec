@@ -90,7 +90,7 @@ public class ShelterManager : MonoBehaviour
         MainCamera.SetActive(true);
         playerFollow.SetActive(true);
         playerCapsule.SetActive(true);
-        playerCapsule.transform.position = playerCapsule.transform.position - playerCapsule.transform.forward * 2;
+        playerCapsule.transform.position = new Vector3(519.32f, 60.09f, -163.40f);
         
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         inGameUI.SetActive(true);

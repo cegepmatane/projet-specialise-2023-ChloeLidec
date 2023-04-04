@@ -55,7 +55,7 @@ public class HomeTPManager : MonoBehaviour
             {
                 houseUI.SetActive(true);
                 houseUI.transform.Find("MenuHouseBought").gameObject.SetActive(true);
-                string title = this.gameObject.name.Replace("_", " ") + " (Your Home)";
+                string title = this.gameObject.name.Replace("_", " ") + " (Votre maison)";
                 houseUI.transform.Find("MenuHouseBought").gameObject.transform.Find("Title").gameObject.GetComponent<UnityEngine.UI.Text>().text = title;
             }
             else
