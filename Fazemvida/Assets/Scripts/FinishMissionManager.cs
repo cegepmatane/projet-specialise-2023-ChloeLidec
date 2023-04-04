@@ -122,7 +122,7 @@ public class FinishMissionManager : MonoBehaviour
         {
             stopWatch.Finish();
             missionFarmSingleton.FinishMission();
-            float missionTime = missionTaxiSingleton.missionTime;
+            float missionTime = missionFarmSingleton.missionTime;
             //calculate reward
             int reward = 0;
             float timeDiff = 700 - missionTime;
