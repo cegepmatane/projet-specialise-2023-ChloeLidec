@@ -107,4 +107,5 @@ public class MenuController : MonoBehaviour
         //overwrite the file with the new data
         File.WriteAllText(Application.persistentDataPath + "" + playerSingleton.playerName + ".json", json);
     }
+
 }
