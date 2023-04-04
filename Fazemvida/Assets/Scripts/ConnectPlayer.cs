@@ -84,6 +84,8 @@ public class ConnectPlayer : MonoBehaviour
             {
                 playerSingleton.SetAnimals(player.GetAnimals());
             }
+            playerSingleton.corn = player.corn;
+            
         }
         else
         {
