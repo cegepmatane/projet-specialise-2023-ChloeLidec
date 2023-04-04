@@ -43,8 +43,8 @@ public class HarvestingManager : MonoBehaviour
             missionFarm.isHarvesting = true;
             sliderHarvesting.SetActive(true);
             HoeMovement hoeslidermvt = sliderHarvesting.GetComponent<HoeMovement>();
-            hoeslidermvt.Hoe(2f);
-            yield return new WaitForSeconds(2);
+            hoeslidermvt.Hoe(1f);
+            yield return new WaitForSeconds(1);
             sliderHarvesting.SetActive(false);
             corn.SetActive(false);
             missionFarm.isHarvesting = false;
