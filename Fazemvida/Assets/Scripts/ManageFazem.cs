@@ -81,12 +81,15 @@ public class ManageFazem : MonoBehaviour
         textCA.GetComponent<UnityEngine.UI.Text>().text = playerSingleton.playerMoney.ToString();
     }
 
-    public string missionStarted(){
+    public string MissionStarted(){
         if (missionGBSingleton!=null && !missionGBSingleton.stopped){
             return "GB";
         }
         else if (missionTaxiSingleton!=null && !missionTaxiSingleton.stopped){
             return "Taxi";
+        }
+        else if (missionFarmSingleton!=null && !missionFarmSingleton.stopped){
+            return "Farm";
         }
         else{
             return "none";

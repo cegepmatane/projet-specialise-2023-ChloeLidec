@@ -22,7 +22,7 @@ public class ShowHideMGBButton : MonoBehaviour
         
         public void Update(){
             //if the player is close to th pole
-            if (IsPlayerCloseToPole() && !menuUI.activeSelf && !menuMissionUI.activeSelf && (mainScript.missionStarted()=="GB" || mainScript.missionStarted()=="none")){
+            if (IsPlayerCloseToPole() && !menuUI.activeSelf && !menuMissionUI.activeSelf && (mainScript.MissionStarted()=="GB" || mainScript.MissionStarted()=="none")){
                 //show the button
                 missionButton.SetActive(true);
             }

@@ -17,7 +17,7 @@ public class HomeTPManager : MonoBehaviour
     public GameObject housesCollider;
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" && !home.GetInHome() && mainScript.missionStarted()=="none")
+        if (other.gameObject.tag == "Player" && !home.GetInHome() && mainScript.MissionStarted()=="none")
         {
             ShowMenu(this.gameObject);
         }

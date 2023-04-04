@@ -9,7 +9,7 @@ public class PlayerSingleton
     public string playerName;
     public int playerMoney;
     public Vector3 playerPosition;
-    public string house;
+    public string house = "";
     public List<string> animals = new List<string>();
     public bool leftHouse = false;
     public int corn = 0;

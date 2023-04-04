@@ -39,7 +39,7 @@ public class MenuMissionFController : MonoBehaviour
         menuUI.SetActive(true);
 
         //if the player is in the mission, launch again and change the text of the button
-        if(mainScript.missionStarted() == "Farm"){
+        if(mainScript.MissionStarted() == "Farm"){
             GameObject button = menuUI.transform.Find("LaunchMission").gameObject;
             button.GetComponentInChildren<Text>().text = "Relancer la mission";
         }
