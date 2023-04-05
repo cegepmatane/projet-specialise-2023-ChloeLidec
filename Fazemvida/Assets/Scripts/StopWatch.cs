@@ -23,6 +23,8 @@ public class StopWatch : MonoBehaviour
         textTime.text = "0:00.00";
         startTime = Time.time;
         finished = false;
+        pausedTime = 0f;
+        pauseTime = 0f;
     }
 
     // Update is called once per frame
