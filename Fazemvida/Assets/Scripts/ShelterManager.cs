@@ -98,7 +98,6 @@ public class ShelterManager : MonoBehaviour
 
     public void Adopt(){
         List<string> animals = player.GetAnimals();
-        //get just the animal types ie. "cat", "dog", "bird" by spliting the string
         List<string> animalTypes = new List<string>();
         List<string> animalNames = new List<string>();
         foreach (string animal in animals)
@@ -107,9 +106,9 @@ public class ShelterManager : MonoBehaviour
             animalTypes.Add(animalSplit[0]);
             animalNames.Add(animalSplit[1]);
         }
-        if (player.playerMoney >= 100 && !animalTypes.Contains(this.gameObject.name))
+        if (player.playerMoney >= 300 && !animalTypes.Contains(this.gameObject.name))
         {
-            player.RemoveMoney(100);
+            player.RemoveMoney(300);
             string animalName = this.gameObject.name;
             player.AddAnimal(animalName);
             this.gameObject.SetActive(false);

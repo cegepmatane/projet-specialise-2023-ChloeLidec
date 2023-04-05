@@ -13,6 +13,7 @@ public class Player
     public List<string> animals;
     public bool leftHouse;
     public int corn;
+    public List<string> furniture;
     
     public Player(string name, int money)
     {
@@ -46,5 +47,9 @@ public class Player
     public int GetCorn()
     {
         return corn;
+    }
+    public List<string> GetFurniture()
+    {
+        return furniture;
     }
 }

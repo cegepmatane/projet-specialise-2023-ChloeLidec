@@ -118,8 +118,8 @@ public class HomeTPManager : MonoBehaviour
 
     public void BuyHouse(){
         bool hasHome = player.GetHouseName() != "" && player.GetHouseName() != null;
-        if (!hasHome && player.playerMoney >= 1000){
-            player.RemoveMoney(1000);
+        if (!hasHome && player.playerMoney >= 5000){
+            player.RemoveMoney(5000);
             GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
             player.SetHouseName(home.tempHouse);
             home.SetHouse(home.tempHouse);

@@ -21,6 +21,9 @@ public class ManageHouse : MonoBehaviour
     public GameObject menuRename;
     public GameObject renameButton;
 
+    [Header("Furniture")]
+    public GameObject furnitureContainer;
+
     public StarterAssetsInputs starterAssetsInputs;
     // Start is called before the first frame update
     void Start()
@@ -53,6 +56,17 @@ public class ManageHouse : MonoBehaviour
                     child.gameObject.SetActive(false);
                 }
             
+        }
+        foreach (Transform child in furnitureContainer.transform)
+        {
+            if (playerSingleton.GetFurniture().Contains(child.gameObject.name))
+            {
+                child.gameObject.SetActive(true);
+            }
+            else
+            {
+                child.gameObject.SetActive(false);
+            }
         }
     }
 

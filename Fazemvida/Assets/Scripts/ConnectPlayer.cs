@@ -85,6 +85,14 @@ public class ConnectPlayer : MonoBehaviour
                 playerSingleton.SetAnimals(player.GetAnimals());
             }
             playerSingleton.corn = player.corn;
+            if (player.GetFurniture() == null || player.GetFurniture().Count == 0)
+            {
+                playerSingleton.SetFurniture(new List<string>());
+            }
+            else
+            {
+                playerSingleton.SetFurniture(player.GetFurniture());
+            }
             
         }
         else

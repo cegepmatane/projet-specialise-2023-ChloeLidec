@@ -13,6 +13,7 @@ public class PlayerSingleton
     public List<string> animals = new List<string>();
     public bool leftHouse = false;
     public int corn = 0;
+    public List<string> furniture = new List<string>();
 
     private PlayerSingleton()
     {
@@ -107,4 +108,17 @@ public class PlayerSingleton
     {
         corn -= amount;
     }
+    public void SetFurniture(List<string> furniture)
+    {
+        this.furniture = furniture;
+    }
+    public List<string> GetFurniture()
+    {
+        return furniture;
+    }
+    public void AddFurniture(string furniture)
+    {
+        this.furniture.Add(furniture);
+    }
+    
 }

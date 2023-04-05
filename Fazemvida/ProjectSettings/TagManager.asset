@@ -9,6 +9,7 @@ TagManager:
   - Boat
   - Animal
   - Corn
+  - Furniture
   layers:
   - Default
   - TransparentFX
