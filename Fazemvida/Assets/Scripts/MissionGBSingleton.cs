@@ -10,6 +10,7 @@ public class MissionGBSingleton
     public int nbOfCheckpointsPassed;
     public bool stopped = true;
     public float missionTime;
+    public bool paused = false;
 
     private MissionGBSingleton()
     {
@@ -48,10 +49,6 @@ public class MissionGBSingleton
     public void FinishMission()
     {
         stopped = true;
-        missionTime = Time.time - missionStartTime;
-        string minutes = ((int)missionTime / 60).ToString();
-        string seconds = (missionTime % 60).ToString("f2");
-        missionTime = 60 * float.Parse(minutes) + float.Parse(seconds);
     }
 
     public void DeleteInstance()

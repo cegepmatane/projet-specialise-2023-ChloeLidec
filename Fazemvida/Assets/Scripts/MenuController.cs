@@ -20,6 +20,7 @@ public class MenuController : MonoBehaviour
 
     [Header("Missions")]
     [SerializeField] private GameObject missionUI = null;
+    [SerializeField] private StopWatch stopwatch = null;
     
     [Header("Player")]
     [SerializeField] private GameObject human = null;
@@ -71,8 +72,25 @@ public class MenuController : MonoBehaviour
             playerFollow.SetActive(false);
             playerCapsule.SetActive(false);
         }
+        stopwatch.Pause();
+        string mission = mainScript.MissionStarted();
+        if (mission == "GB"){
+            MissionGBSingleton missionGBSingleton = MissionGBSingleton.Instance();
+            missionGBSingleton.paused = true;
+        }
+        else if (mission == "Taxi"){
+            MissionTaxiSingleton missionTaxiSingleton = MissionTaxiSingleton.Instance();
+            missionTaxiSingleton.paused = true;
+        }
+        else if (mission == "Farm"){
+            MissionFarmSingleton missionFarmSingleton = MissionFarmSingleton.Instance();
+            missionFarmSingleton.paused = true;
+        }
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         inGameUI.SetActive(false);
+        mainUI.transform.Find("CheckpointsGB").gameObject.SetActive(false);
+        mainUI.transform.Find("FarmMissionUI").gameObject.SetActive(false);
+        mainUI.transform.Find("StopWatch").gameObject.SetActive(false);
         menuUI.SetActive(true);
         ShowInventory();
     }
@@ -106,6 +124,25 @@ public class MenuController : MonoBehaviour
         GameObject inGameUI = mainUI.transform.Find("InGameUI").gameObject;
         inGameUI.SetActive(true);
         menuUI.SetActive(false);
+        stopwatch.Resume();
+        string mission = mainScript.MissionStarted();
+        if (mission == "GB"){
+            MissionGBSingleton missionGBSingleton = MissionGBSingleton.Instance();
+            missionGBSingleton.paused = false;
+            mainUI.transform.Find("CheckpointsGB").gameObject.SetActive(true);
+            mainUI.transform.Find("StopWatch").gameObject.SetActive(true);
+        }
+        else if (mission == "Taxi"){
+            MissionTaxiSingleton missionTaxiSingleton = MissionTaxiSingleton.Instance();
+            missionTaxiSingleton.paused = false;
+            mainUI.transform.Find("StopWatch").gameObject.SetActive(true);
+        }
+        else if (mission == "Farm"){
+            MissionFarmSingleton missionFarmSingleton = MissionFarmSingleton.Instance();
+            missionFarmSingleton.paused = false;
+            mainUI.transform.Find("FarmMissionUI").gameObject.SetActive(true);
+            mainUI.transform.Find("StopWatch").gameObject.SetActive(true);
+        }
     }
 
     public void Save(){
@@ -200,7 +237,7 @@ public class MenuController : MonoBehaviour
                 missionUI.SetActive(true);
                 if (mainScript.MissionStarted() == "none"){
                     missionUI.transform.Find("Title").gameObject.GetComponent<Text>().text = "Aucune mission en cours";
-                    missionUI.transform.Find("Description").gameObject.GetComponent<Text>().text = "Vous pouvez effectuer des missions aux endroits marqués par des halos rouges e par des etoiles rouges sur la carte";
+                    missionUI.transform.Find("Description").gameObject.GetComponent<Text>().text = "Vous pouvez effectuer des missions aux endroits marqués par des halos rouges et par des etoiles rouges sur la carte";
                 }
                 else if (mainScript.MissionStarted() == "GB"){
                     missionUI.transform.Find("Title").gameObject.GetComponent<Text>().text = "Mission du Grand Bois";

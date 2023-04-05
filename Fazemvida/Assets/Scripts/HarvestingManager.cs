@@ -22,7 +22,7 @@ public class HarvestingManager : MonoBehaviour
         }
         
         public void Update(){
-            if (!missionFarm.stopped){
+            if (!missionFarm.stopped && !missionFarm.paused){
                 textCornAmount.GetComponent<Text>().text = missionFarm.corn.ToString();
                 if (missionFarm.corn >= 50){
                     haloFinish.SetActive(true);

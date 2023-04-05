@@ -26,13 +26,13 @@ public class FinishMissionManager : MonoBehaviour
     public GameObject coinUI;
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" && !missionGBSingleton.stopped )
+        if (other.gameObject.tag == "Player" && !missionGBSingleton.stopped && !missionGBSingleton.paused)
         {
             stopWatch.Finish();
             checkpointUI.text = "";
             missionGBSingleton.FinishMission();
             //get mission time in seconds
-            float missionTime = missionGBSingleton.missionTime;
+            float missionTime = stopWatch.GetTime();
             int nbOfCheckpointsPassed = missionGBSingleton.nbOfCheckpointsPassed;
 
             //calculate reward
@@ -77,7 +77,7 @@ public class FinishMissionManager : MonoBehaviour
             menuUI.transform.Find("Recap").GetComponent<Text>().text = recap;
             menuUI.SetActive(true);
         }
-        else if (other.gameObject.tag == "Player" && !missionTaxiSingleton.stopped)
+        else if (other.gameObject.tag == "Player" && !missionTaxiSingleton.stopped && !missionTaxiSingleton.paused)
         {
             stopWatch.Finish();
             missionTaxiSingleton.FinishMission();
@@ -85,7 +85,7 @@ public class FinishMissionManager : MonoBehaviour
             missionTaxiSingleton.destination = null;
             taxiPosition = taxi.transform.position;
             taxi.SetActive(false);
-            float missionTime = missionTaxiSingleton.missionTime;
+            float missionTime = stopWatch.GetTime();
             //calculate reward
             int reward = 0;
             float timeDiff = 360 - missionTime;
@@ -118,11 +118,11 @@ public class FinishMissionManager : MonoBehaviour
             menuUI.transform.Find("Recap").GetComponent<Text>().text = recap;
             menuUI.SetActive(true);
         }
-        else if (other.gameObject.tag == "Player" && !missionFarmSingleton.stopped)
+        else if (other.gameObject.tag == "Player" && !missionFarmSingleton.stopped && missionFarmSingleton.corn >= 50 && !missionFarmSingleton.paused)
         {
             stopWatch.Finish();
             missionFarmSingleton.FinishMission();
-            float missionTime = missionFarmSingleton.missionTime;
+            float missionTime = stopWatch.GetTime();
             //calculate reward
             int reward = 0;
             float timeDiff = 700 - missionTime;
@@ -188,6 +188,8 @@ public class FinishMissionManager : MonoBehaviour
         mainUI.transform.Find("EndMGBUI").gameObject.SetActive(false);
         mainUI.transform.Find("EndMFUI").gameObject.SetActive(false);
         mainUI.transform.Find("VehicleUI").gameObject.SetActive(false);
+        mainUI.transform.Find("FarmMissionUI").gameObject.SetActive(false);
+        mainUI.transform.Find("CheckpointsGB").gameObject.SetActive(false);
 }
 }
 

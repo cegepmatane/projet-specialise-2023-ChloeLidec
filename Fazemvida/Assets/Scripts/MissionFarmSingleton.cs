@@ -11,6 +11,7 @@ public class MissionFarmSingleton
     public float missionTime;
     public int corn;
     public bool isHarvesting = false;
+    public bool paused = false;
 
     private MissionFarmSingleton()
     {
@@ -49,10 +50,6 @@ public class MissionFarmSingleton
     public void FinishMission()
     {
         stopped = true;
-        missionTime = Time.time - missionStartTime;
-        string minutes = ((int)missionTime / 60).ToString();
-        string seconds = (missionTime % 60).ToString("f2");
-        missionTime = 60 * float.Parse(minutes) + float.Parse(seconds);    
     }
 
     public void DeleteInstance()

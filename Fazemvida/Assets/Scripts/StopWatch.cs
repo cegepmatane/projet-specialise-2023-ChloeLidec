@@ -12,6 +12,9 @@ public class StopWatch : MonoBehaviour
     private float startTime;
     private bool finished = false;
     private float t;
+    private bool paused = false;
+    private float pauseTime = 0f;
+    private float pausedTime = 0f;
 
     // Start is called before the first frame update
     public void StartSW()
@@ -27,8 +30,12 @@ public class StopWatch : MonoBehaviour
     {
         if (!finished)
         {
+            if (pausedTime != 0f){
+            t = Time.time - startTime - pausedTime;
+            }
+            else{
             t = Time.time - startTime;
-
+            }
             string minutes = ((int)t / 60).ToString();
             string seconds = (t % 60).ToString("f2");
 
@@ -42,4 +49,23 @@ public class StopWatch : MonoBehaviour
         textTime.gameObject.SetActive(false);
     }
 
+    public void Pause(){
+        paused = true;
+        pauseTime = Time.time;
+    }
+
+    public void Resume(){
+        paused = false;
+        pauseTime = Time.time - pauseTime;
+        if (pausedTime != 0f){
+            pausedTime += pauseTime;
+        }
+        else{
+            pausedTime = pauseTime;
+        }
+    }
+    public float GetTime()
+    {
+        return t;
+    }
 }

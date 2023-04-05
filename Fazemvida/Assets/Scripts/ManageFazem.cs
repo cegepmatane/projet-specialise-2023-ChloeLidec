@@ -19,9 +19,6 @@ public class ManageFazem : MonoBehaviour
     public GameObject mainUI;
     public GameObject vehicleUI;
 
-    [Header("Missions")]
-    public StopWatch stopWatch;
-
     [Header("MissionGB")]
     public Text checkpointText;
     public GameObject[] checkpoints;
@@ -38,6 +35,10 @@ public class ManageFazem : MonoBehaviour
     public GameObject housesHaloContainer;
     public Material buildingsToBuyHalo;
     public Material buildingsHalo;
+
+    [Header("Stopwatch")]
+    public StopWatch stopWatch;
+    public GameObject stopwatchUI;
     // Start is called before the first frame update
     void Start()
     {
