@@ -11,8 +11,10 @@ public class ManageFazem : MonoBehaviour
     MissionTaxiSingleton missionTaxiSingleton;
     MissionFarmSingleton missionFarmSingleton;
     
-    [Header("Human")]
+    [Header("Player")]
     public GameObject human;
+    public GameObject car;
+    public GameObject[] parkingSigns;
 
     [Header("UI")]
     public GameObject coinUI;
@@ -161,4 +163,12 @@ public class ManageFazem : MonoBehaviour
         stopWatch.StartSW();
     }
 
+    public void TPCarToParking(){
+        foreach (GameObject parkingSign in parkingSigns)
+        {
+            if (Vector3.Distance(parkingSign.transform.position, human.transform.Find("PlayerCapsule").gameObject.transform.position) < 2){
+                car.transform.position = parkingSign.transform.position - parkingSign.transform.forward * 10;
+            }
+        }
+    }
 }

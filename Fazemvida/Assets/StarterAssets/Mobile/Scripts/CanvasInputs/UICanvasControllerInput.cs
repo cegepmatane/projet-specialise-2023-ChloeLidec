@@ -13,6 +13,7 @@ namespace StarterAssets
         public MenuMissionTController menuMissionTController;
         public MenuMissionFController menuMissionFController;
         public PrometeoCarController prometeoCarController;
+        public ManageFazem manageFazem;
         public void VirtualMoveInput(Vector2 virtualMoveDirection)
         {
             starterAssetsInputs.MoveInput(virtualMoveDirection);
@@ -73,6 +74,10 @@ namespace StarterAssets
         {
             starterAssetsInputs.StopInput();
             menuMissionFController.StartMission();
+        }
+        public void VirtualTPToParkingInput(){
+            starterAssetsInputs.StopInput();
+            manageFazem.TPCarToParking();
         }
     }
 

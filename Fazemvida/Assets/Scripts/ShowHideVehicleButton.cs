@@ -26,7 +26,7 @@ public class ShowHideVehicleButton : MonoBehaviour
         
         public void Update(){
             //if the player is close to a vehicle
-            if (IsPlayerCloseToVehicle() && !menuUI.activeSelf && !(inOutVehicles.activeVehicle.tag == "Boat")){
+            if (IsPlayerCloseToVehicle() && !menuUI.activeSelf){
                 //show the button
                 vehicleButton.SetActive(true);
             }
@@ -38,7 +38,9 @@ public class ShowHideVehicleButton : MonoBehaviour
 
         //check if the player is close to a vehicle
         public bool IsPlayerCloseToVehicle(){
-            //loop through all vehicles
+            if (inOutVehicles.activeVehicle != null){
+                    return true;
+                }
             foreach (GameObject vehicle in vehicles){
             //if the player is close to the vehicle
             GameObject playerCapsule = player.transform.Find("PlayerCapsule").gameObject;
@@ -46,11 +48,6 @@ public class ShowHideVehicleButton : MonoBehaviour
             int distance = 2;
             if(vehicle.tag=="Boat"){distance = 15;}
             if (Vector3.Distance(vehicle.transform.position, playerCapsule.transform.position) < distance){
-                    return true;
-                }
-            //if the player is in a vehicle
-            if (inOutVehicles.activeVehicle != null){
-                    
                     return true;
                 }
             }
