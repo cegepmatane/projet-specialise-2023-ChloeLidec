@@ -13,6 +13,8 @@ public class HarvestingManager : MonoBehaviour
         public GameObject textCornAmount;
         public ManageFazem mainScript;
         public GameObject sliderHarvesting;
+        [Header("Player")]
+        public GameObject human;
         
 
         public void Start(){
@@ -31,7 +33,8 @@ public class HarvestingManager : MonoBehaviour
                     Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
                     RaycastHit hit;
                     if (Physics.Raycast(ray, out hit)){
-                        if (hit.transform.gameObject.tag == "Corn" && !missionFarm.isHarvesting){
+                        bool cornNearPlayer = Vector3.Distance(hit.transform.gameObject.transform.position, human.transform.Find("PlayerCapsule").transform.position) < 2;
+                        if (hit.transform.gameObject.tag == "Corn" && !missionFarm.isHarvesting && cornNearPlayer){
                             StartCoroutine(Harvesting(hit.transform.gameObject));
                         }
                     }
