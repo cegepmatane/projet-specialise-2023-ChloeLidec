@@ -140,7 +140,6 @@ public class ManageFazem : MonoBehaviour
         inGameUI.SetActive(false);
         taxi.SetActive(true);
         vehicleUI.SetActive(true);
-        vehicleUI.transform.Find("MenuBtn").gameObject.SetActive(false);
         PrometeoCarController  prometeoCarController = taxi.GetComponent<PrometeoCarController>();
         prometeoCarController.enabled = true;
         taxi.transform.Find("Vehicle Camera").gameObject.GetComponent<Camera>().enabled = true;

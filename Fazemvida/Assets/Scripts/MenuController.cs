@@ -81,6 +81,7 @@ public class MenuController : MonoBehaviour
         else if (mission == "Taxi"){
             MissionTaxiSingleton missionTaxiSingleton = MissionTaxiSingleton.Instance();
             missionTaxiSingleton.paused = true;
+            mainUI.transform.Find("VehicleUI").gameObject.SetActive(false);
         }
         else if (mission == "Farm"){
             MissionFarmSingleton missionFarmSingleton = MissionFarmSingleton.Instance();
@@ -136,6 +137,22 @@ public class MenuController : MonoBehaviour
             MissionTaxiSingleton missionTaxiSingleton = MissionTaxiSingleton.Instance();
             missionTaxiSingleton.paused = false;
             mainUI.transform.Find("StopWatch").gameObject.SetActive(true);
+            mainUI.transform.Find("VehicleUI").gameObject.SetActive(true);
+            GameObject move = mainUI.transform.Find("UI_Virtual_Joystick_Move").gameObject;
+            GameObject look = mainUI.transform.Find("UI_Virtual_Joystick_Look").gameObject;
+            GameObject sprint = mainUI.transform.Find("UI_Virtual_Button_Sprint").gameObject;
+            GameObject jump = mainUI.transform.Find("UI_Virtual_Button_Jump").gameObject;
+            move.SetActive(false);
+            look.SetActive(false);
+            sprint.SetActive(false);
+            jump.SetActive(false);
+
+            GameObject playerCapsule = human.transform.Find("PlayerCapsule").gameObject;
+            GameObject MainCamera = human.transform.Find("MainCamera").gameObject;
+            GameObject playerFollow = human.transform.Find("PlayerFollowCamera").gameObject;
+            MainCamera.SetActive(true);
+            playerFollow.SetActive(true);
+            playerCapsule.SetActive(true);
         }
         else if (mission == "Farm"){
             MissionFarmSingleton missionFarmSingleton = MissionFarmSingleton.Instance();
