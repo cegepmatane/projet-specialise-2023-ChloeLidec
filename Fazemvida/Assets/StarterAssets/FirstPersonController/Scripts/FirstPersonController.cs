@@ -127,7 +127,6 @@ namespace StarterAssets
 			// set sphere position, with offset
 			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
 			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore) && transform.position.y < 68f;
-			Debug.Log(Grounded);
 		}
 
 		private void CameraRotation()

@@ -42,6 +42,7 @@ public class MissionTaxiSingleton
     {
         missionStartTime = 0;
         stopped = false;
+        destination = null;
     }
 
     public void FinishMission()

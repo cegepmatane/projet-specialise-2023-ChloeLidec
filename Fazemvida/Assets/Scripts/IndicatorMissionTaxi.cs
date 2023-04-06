@@ -15,11 +15,12 @@ public class IndicatorMissionTaxi : MonoBehaviour
 
     void Start()
     {
-        destination = missionTaxi.destination;
+        
     }
 
     void Update()
     {
+        destination = missionTaxi.destination;
         if (destination != null)
         {
             Vector3 destinationPos = destination.transform.position;

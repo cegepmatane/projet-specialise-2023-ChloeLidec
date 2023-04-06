@@ -117,7 +117,9 @@ public class ManageFazem : MonoBehaviour
         missionTaxiSingleton = MissionTaxiSingleton.Instance();
         missionTaxiSingleton.ResetMission();
         int randomIndex = Random.Range(0, possibleDestinations.Length);
+        Debug.Log(randomIndex);
         GameObject destination = possibleDestinations[randomIndex];
+        Debug.Log(destination);
         missionTaxiSingleton.SetDestination(destination);
         destination.SetActive(true);
         GameObject move = mainUI.transform.Find("UI_Virtual_Joystick_Move").gameObject;
