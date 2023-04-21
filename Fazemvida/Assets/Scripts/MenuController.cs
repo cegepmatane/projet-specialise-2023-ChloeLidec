@@ -40,6 +40,9 @@ public class MenuController : MonoBehaviour
         {
             vehicle = inOutVehicles.activeVehicle;
         }
+        else if (mainScript.taxi.activeSelf){
+            vehicle = mainScript.taxi;
+        }
         else
         {
             vehicle = null;
@@ -52,6 +55,7 @@ public class MenuController : MonoBehaviour
             mainUI.transform.Find("VehicleUI").gameObject.SetActive(false);
             vehicle.SetActive(false);
             vehicle.transform.Find("Vehicle Camera").gameObject.GetComponent<Camera>().enabled = false;
+            vehicle.GetComponent<PrometeoCarController>().StopCar();
             vehicle.GetComponent<PrometeoCarController>().enabled = false;
         }
         //deactive all human UIs and components
@@ -254,7 +258,7 @@ public class MenuController : MonoBehaviour
                 missionUI.SetActive(true);
                 if (mainScript.MissionStarted() == "none"){
                     missionUI.transform.Find("Title").gameObject.GetComponent<Text>().text = "Aucune mission en cours";
-                    missionUI.transform.Find("Description").gameObject.GetComponent<Text>().text = "Vous pouvez effectuer des missions aux endroits marqués par des halos rouges et par des etoiles rouges sur la carte";
+                    missionUI.transform.Find("Description").gameObject.GetComponent<Text>().text = "Vous pouvez effectuer des missions aux endroits marqués par des halos rouges et par des chats sur la carte";
                 }
                 else if (mainScript.MissionStarted() == "GB"){
                     missionUI.transform.Find("Title").gameObject.GetComponent<Text>().text = "Mission du Grand Bois";

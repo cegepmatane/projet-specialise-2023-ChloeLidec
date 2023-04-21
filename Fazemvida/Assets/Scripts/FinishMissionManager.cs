@@ -30,6 +30,7 @@ public class FinishMissionManager : MonoBehaviour
         {
             stopWatch.Finish();
             checkpointUI.text = "";
+            checkpointUI.gameObject.SetActive(false);
             missionGBSingleton.FinishMission();
             //get mission time in seconds
             float missionTime = stopWatch.GetTime();

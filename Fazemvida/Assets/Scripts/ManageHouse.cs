@@ -90,7 +90,7 @@ public class ManageHouse : MonoBehaviour
             if (child.gameObject.activeSelf)
             {
                child.gameObject.transform.Find("Name").gameObject.GetComponent<TextMesh>().text = animalNames[animalTypes.IndexOf(child.gameObject.name)];
-               if (Vector3.Distance(child.position, capsule.transform.position) < 2.5f)
+               if (Vector3.Distance(child.position, capsule.transform.position) < 2.5f && !menuRename.activeSelf)
                 {
                     renameButton.SetActive(true);
                     break;

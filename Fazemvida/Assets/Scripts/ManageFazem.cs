@@ -110,6 +110,7 @@ public class ManageFazem : MonoBehaviour
             checkpoint.SetActive(true);
         }
         stopWatch.StartSW();
+        checkpointText.gameObject.SetActive(true);
         checkpointText.text = "Checkpoints 0/7";
     }
 

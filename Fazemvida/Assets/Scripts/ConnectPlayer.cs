@@ -25,8 +25,8 @@ public class ConnectPlayer : MonoBehaviour
         }
         else
         {
-            textInfo.text = "Invalid username, please try again. Only letters, numbers, underscores and dashes are allowed.";
-            playerNameInput.text = "Enter username...";
+            textInfo.text = "Nom invalide. Entrez un nom sans caractères spéciaux autres que - et _";
+            playerNameInput.text = "Entrez un nom...";
         }
     }
 

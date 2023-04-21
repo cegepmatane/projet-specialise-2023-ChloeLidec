@@ -195,7 +195,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter username...
+  m_Text: Entrez un nom...
 --- !u!222 &402198748
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -811,8 +811,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter a username with only letters, numbers , _ , - and click the arrow
-    to start
+  m_Text: "Entrez un nom d'utilisateur avec seuleument lettres, nombres, _, - et
+    cliquez sur la fl\xE8che"
 --- !u!222 &1528013604
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -892,7 +892,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Please put your phone horizontally to have a better experience.
+  m_Text: "Mettez votre t\xE9l\xE9phone \xE0 l'horizontal pour avoir une meilleure
+    exp\xE9rience"
 --- !u!222 &1706242634
 CanvasRenderer:
   m_ObjectHideFlags: 0

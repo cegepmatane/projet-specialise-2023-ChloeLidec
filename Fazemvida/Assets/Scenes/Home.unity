@@ -4415,7 +4415,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter pet name...
+  m_Text: Entrez un nom...
 --- !u!222 &820212778
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6979,7 +6979,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter a name for your pet then click the arrow
+  m_Text: "Entrez un nom pour votre animal et appuyez sur la fl\xE8che"
 --- !u!222 &1416563192
 CanvasRenderer:
   m_ObjectHideFlags: 0
